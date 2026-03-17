@@ -1,12 +1,12 @@
 import { Flex } from "@chg-ds/unified-design-system";
 import { Table } from "@chg-ds/unified-design-system";
 import { Text } from "@chg-ds/unified-design-system";
-import { colorTokens } from "../../design-system/tokens/runtime/color";
-import { motionTokens } from "../../design-system/tokens/runtime/motion";
-import { radiusTokens } from "../../design-system/tokens/runtime/radius";
-import { shadowTokens } from "../../design-system/tokens/runtime/shadow";
-import { spacingTokens } from "../../design-system/tokens/runtime/spacing";
-import { typographyTokens } from "../../design-system/tokens/runtime/typography";
+import { colorTokens } from "@chg-ds/unified-design-system/tokens/color";
+import { motionTokens } from "@chg-ds/unified-design-system/tokens/motion";
+import { radiusTokens } from "@chg-ds/unified-design-system/tokens/radius";
+import { shadowTokens } from "@chg-ds/unified-design-system/tokens/shadow";
+import { spacingTokens } from "@chg-ds/unified-design-system/tokens/spacing";
+import { typographyTokens } from "@chg-ds/unified-design-system/tokens/typography";
 import { DocPageLayout } from "./DocPageLayout";
 
 const PRIMITIVE_COLUMNS = [

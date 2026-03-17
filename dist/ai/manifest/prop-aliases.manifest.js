@@ -1,1 +1,0 @@
-const l={global:{},byComponent:{Chip:{iconplacement:"iconPlacement"}}};function c(e,n){return(l.byComponent[e]??{})[n]??l.global[n]??n}function a(e){const n=l.byComponent[e]??{};return Object.entries(n).map(([o,t])=>({alias:o,canonical:t})).sort((o,t)=>o.alias.localeCompare(t.alias))}export{l as PropAliasRules,a as getAliasEntries,c as getCanonicalPropName};

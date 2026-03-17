@@ -1,10 +1,60 @@
-import { Divider } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
-import { useState } from "react";
-import Accordion, { AccordionItem } from "@chg-ds/unified-design-system/Accordion";
+import { Accordion, Divider, Flex, Text } from "@chg-ds/unified-design-system";
+import { useState, type HTMLAttributes, type ReactNode } from "react";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
+
+interface AccordionItemProps extends HTMLAttributes<HTMLDivElement> {
+  label: string;
+  defaultExpanded?: boolean;
+  children?: ReactNode;
+  onToggle?: (expanded: boolean) => void;
+}
+
+function AccordionItem({
+  label,
+  defaultExpanded = false,
+  children,
+  className = "",
+  onToggle,
+  ...props
+}: AccordionItemProps) {
+  const [expanded, setExpanded] = useState(defaultExpanded);
+
+  const handleToggle = () => {
+    setExpanded((previous) => {
+      const next = !previous;
+      onToggle?.(next);
+      return next;
+    });
+  };
+
+  return (
+    <div
+      className={className}
+      style={{ borderBottom: "var(--uds-border-width-1) solid var(--uds-border-primary)" }}
+      {...props}
+    >
+      <button
+        type="button"
+        onClick={handleToggle}
+        aria-expanded={expanded}
+        style={{
+          width: "100%",
+          padding: "var(--uds-spacing-12)",
+          textAlign: "left",
+          background: "transparent",
+          border: 0,
+          color: "var(--uds-text-primary)",
+          cursor: "pointer",
+          font: "inherit",
+        }}
+      >
+        {label}
+      </button>
+      {expanded ? <div style={{ padding: "0 var(--uds-spacing-12) var(--uds-spacing-12)" }}>{children}</div> : null}
+    </div>
+  );
+}
 
 const faqItems = [
   {

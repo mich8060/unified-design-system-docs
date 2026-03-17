@@ -5,7 +5,7 @@ import { Divider } from "@chg-ds/unified-design-system";
 import { Dropdown } from "@chg-ds/unified-design-system";
 import { Flex } from "@chg-ds/unified-design-system";
 import { Text } from "@chg-ds/unified-design-system";
-import { ThemeProvider, createBrand, createTheme, useTheme, useThemeController } from "../../design-system/theme";
+import { ThemeProvider, createBrand, createTheme, useTheme, useThemeController } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 

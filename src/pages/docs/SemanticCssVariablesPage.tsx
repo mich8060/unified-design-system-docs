@@ -1,7 +1,7 @@
 import { Flex } from "@chg-ds/unified-design-system";
 import { Table } from "@chg-ds/unified-design-system";
 import { Text } from "@chg-ds/unified-design-system";
-import tokensCss from "../../design-system/tokens/index.css?raw";
+import tokensCss from "@chg-ds/unified-design-system/tokens.css?raw";
 import { DocPageLayout } from "./DocPageLayout";
 
 const TOKEN_COLUMNS = [

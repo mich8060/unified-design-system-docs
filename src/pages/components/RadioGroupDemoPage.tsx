@@ -1,4 +1,4 @@
-import { Divider, Flex, RadioGroup, Text } from "../../design-system";
+import { Divider, Flex, RadioGroup, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 

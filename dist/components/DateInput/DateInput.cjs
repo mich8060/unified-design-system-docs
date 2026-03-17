@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=require("react/jsx-runtime"),u=require("../TextInput/TextInput.cjs");function n(t){return e.jsx(u.default,{type:"date",...t})}exports.DateInput=n;

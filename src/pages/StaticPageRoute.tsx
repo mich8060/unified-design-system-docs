@@ -1,8 +1,8 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { getStaticPageByPath } from "../demos/static-page.registry";
-import { Container } from "../design-system/components/Container";
-import { Text } from "../design-system/components/Text";
+import { Container } from "@chg-ds/unified-design-system";
+import { Text } from "@chg-ds/unified-design-system";
 
 const staticPageModules = import.meta.glob("./docs/*Page.tsx");
 const patternPageModules = import.meta.glob("./patterns/*Page.tsx");

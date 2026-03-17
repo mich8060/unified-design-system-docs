@@ -1,4 +1,4 @@
-import { Button, Code, Divider, Flex, ProvidersCard, Text, type ProvidersCardTag } from "../../design-system";
+import { Button, Code, Divider, Flex, ProvidersCard, Text, type ProvidersCardTag } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 
 interface ProviderCardData {

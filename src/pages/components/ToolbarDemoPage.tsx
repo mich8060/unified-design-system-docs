@@ -1,4 +1,4 @@
-import { Branding, Button, Code, Divider, Flex, Text, Toolbar } from "../../design-system";
+import { Branding, Button, Code, Divider, Flex, Text, Toolbar } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 

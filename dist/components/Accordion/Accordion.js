@@ -1,1 +1,0 @@
-import{jsx as t}from"react/jsx-runtime";/* empty css               */function l({children:a,className:o="",...n}){const{variant:r="default",...s}=n,c=["accordion",r==="secondary"?"accordion--secondary":"",o].filter(Boolean).join(" ");return t("div",{className:c,...s,children:a})}export{l as default};

@@ -1,4 +1,4 @@
-import { Code, Divider, Flex, Status, Text } from "../../design-system";
+import { Code, Divider, Flex, Status, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 

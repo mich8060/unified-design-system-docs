@@ -1,4 +1,4 @@
-import { Button, Code, Divider, Flex, SectionHeader, Tag, Text } from "../../design-system";
+import { Button, Code, Divider, Flex, SectionHeader, Tag, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 

@@ -1,1 +1,0 @@
-import{jsx as i}from"react/jsx-runtime";/* empty css                 */function a({direction:o="vertical",className:l="",children:r,...s}){const e=["uds-scroll-view",`uds-scroll-view--${o}`,l].filter(Boolean).join(" ");return i("div",{className:e,...s,children:r})}export{a as ScrollView};

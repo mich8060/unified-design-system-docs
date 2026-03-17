@@ -1,1 +1,0 @@
-import{jsx as s}from"react/jsx-runtime";import{useState as u}from"react";import o from"../TextInput/TextInput.js";function c({showToggle:r=!0,initiallyVisible:i=!1,...t}){const[e,n]=u(i);return r?s(o,{type:e?"text":"password",icon:e?"EyeSlash":"Eye",onIconClick:()=>n(p=>!p),...t}):s(o,{type:"password",...t})}export{c as PasswordInput};

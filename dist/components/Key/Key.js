@@ -1,1 +1,0 @@
-import{jsx as i}from"react/jsx-runtime";/* empty css         */const t="uds-key",a={light:"light",dark:"dark"};function d({label:o,appearance:s="light",className:e="",...l}){const r=[t,a[s]&&`${t}--${a[s]}`,e].filter(Boolean).join(" ");return i("kbd",{className:r,...l,children:o})}export{d as default};

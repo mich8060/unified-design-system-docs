@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Checklist, type ChecklistItem, Divider, Flex, Text } from "../../design-system";
+import { Checklist, type ChecklistItem, Divider, Flex, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 
 const BASE_STEPS: ChecklistItem[] = [

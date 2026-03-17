@@ -13,7 +13,6 @@ import { Text } from "@chg-ds/unified-design-system";
 import { Toggle } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
-import { doctorList } from "../../design-system/assets/images/doctors";
 
 const APP_SHELL_PROPS: ComponentPropRow[] = [
   { prop: "brand", type: "string", defaultValue: '"default"', description: "Brand namespace class applied to shell root (`brand-*`)." },
@@ -101,11 +100,20 @@ const LIVE_PREVIEW_MENU_ITEMS = [
 
 type DoctorRecord = {
   name: string;
-  image: string;
+  image?: string;
   initials: string;
 };
 
-const ALL_DOCTORS = doctorList as DoctorRecord[];
+const ALL_DOCTORS: DoctorRecord[] = [
+  { name: "Dr. Amelia Rivera", initials: "AR" },
+  { name: "Dr. Benjamin Cole", initials: "BC" },
+  { name: "Dr. Chloe Nguyen", initials: "CN" },
+  { name: "Dr. Daniel Patel", initials: "DP" },
+  { name: "Dr. Elena Morris", initials: "EM" },
+  { name: "Dr. Farah Hassan", initials: "FH" },
+  { name: "Dr. Gabriel Lee", initials: "GL" },
+  { name: "Dr. Hannah Kim", initials: "HK" },
+];
 const PREVIEW_DOCTORS = ALL_DOCTORS.slice(0, 8);
 const DOCTOR_OPTIONS = ALL_DOCTORS.map((doctor) => ({
   value: doctor.name,

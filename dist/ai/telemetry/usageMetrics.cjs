@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t={};function s(e){const r=`${e.metricType}:${e.name}`;t[r]=(t[r]??0)+(e.value??1)}function c(){return{...t}}function o(){Object.keys(t).forEach(e=>{delete t[e]})}exports.getUsageMetrics=c;exports.recordUsageMetric=s;exports.resetUsageMetrics=o;

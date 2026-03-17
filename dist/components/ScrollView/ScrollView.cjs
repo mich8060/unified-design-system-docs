@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=require("react/jsx-runtime");;/* empty css                    */function t({direction:e="vertical",className:l="",children:r,...i}){const s=["uds-scroll-view",`uds-scroll-view--${e}`,l].filter(Boolean).join(" ");return o.jsx("div",{className:s,...i,children:r})}exports.ScrollView=t;
