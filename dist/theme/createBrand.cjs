@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});function a(r,e={}){return{name:r,className:e.className??`brand-${r}`,tokens:e.tokens,modeTokens:e.modeTokens}}exports.createBrand=a;

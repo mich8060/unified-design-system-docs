@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./_commonjsHelpers.cjs"),r=require("../node_modules/prismjs/prism.cjs");var t=r.__require();const s=e.getDefaultExportFromCjs(t);exports.default=s;

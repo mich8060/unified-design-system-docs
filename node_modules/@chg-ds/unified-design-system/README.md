@@ -1,0 +1,92 @@
+# UDS Sample Application (Spec-driven + SCSS + Multi-brand + Governed App Shell)
+
+This repo is a working reference implementation showing:
+
+- Token-driven SCSS architecture (primitives → semantics → brands)
+- Design-system components styled with SCSS (BEM, no raw values)
+- Spec-driven component contracts (spec objects in code)
+- Canonical component template + spec template
+- A governed, configurable application shell with routing (routing lives in the shell)
+- Brand + theme applied at the shell root
+- Slot-based shell regions + structured layout config
+- Linting “lockdown” (ESLint + Stylelint) and a CLI scaffold generator
+
+## Quick start
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+- `npm run dev` – start Vite dev server
+- `npm run build` – production build
+- `npm run preview` – preview build
+- `npm run lint` – eslint
+- `npm run lint:styles` – stylelint for scss
+- `npm run format` – prettier
+- `npm run generate:component -- Name` – scaffold a new component folder from the canonical template
+
+See `/docs` for the full methodology and governance model.
+
+- [Claude Rules](docs/claude-rules.md) – conventions and constraints for AI-assisted development in this repo
+- [AI Implementation Learnings](docs/08-ai-implementation-learnings.md) – validated integration guidance and corrected component API assumptions
+- [Project Learnings Log](docs/09-project-learnings-log.md) – living, prompt-by-prompt implementation constraints and guardrails
+- [Consumer Project Setup](docs/10-consumer-project-setup.md) – copy-paste setup guide for integrating UDS in a new app
+- [Runtime Tokens Migration](docs/11-runtime-tokens-migration.md) – typed token exports and generated token CSS usage
+- [Theming Engine API](docs/12-theming-engine.md) – createTheme/createBrand/ThemeProvider architecture and usage
+- [Theming Platform API](docs/13-theming-platform-api.md) – formal public theming layer, architecture, and usage
+- [AI-Native Architecture](docs/15-ai-native-architecture.md) – machine-readable metadata, patterns, and AI export strategy
+- [AI CI Enforcement](docs/16-ai-ci-enforcement.md) – governance pipeline and merge-blocking validation flow
+
+## NPM package quick start
+
+Install the package and required peer dependencies:
+
+```bash
+npm i @chg-ds/unified-design-system react react-dom react-router-dom @phosphor-icons/react
+```
+
+Import components and styles:
+
+```tsx
+import { AppShell, Button, Flex, Menu, Text, TextInput } from "@chg-ds/unified-design-system";
+import "@chg-ds/unified-design-system/styles.css";
+```
+
+Runtime token primitives are also available as typed exports:
+
+```ts
+import { spacingTokens } from "@chg-ds/unified-design-system/tokens/spacing";
+import { runtimeTokens } from "@chg-ds/unified-design-system/tokens";
+import "@chg-ds/unified-design-system/tokens.css";
+```
+
+AI metadata is available from a dedicated subpath:
+
+```ts
+import { UDS_AI_MANIFEST, UDS_FLOW_PATTERNS } from "@chg-ds/unified-design-system/ai";
+```
+
+## Common prop pitfalls
+
+- `Button` uses `appearance`, not `variant`
+  - valid values: `primary`, `soft`, `outline`, `text`, `ghost`, `disabled`, `destructive`
+- `Text` requires a `variant` value such as `heading-32` or `body-16`
+- `TextInput` icon placement uses `iconPosition` with `left` or `right`
+- `Menu` mode uses `light` or `dark`
+
+## Exported constants
+
+Use exported constants to avoid guessing valid values:
+
+```tsx
+import {
+  BUTTON_APPEARANCES,
+  TEXT_VARIANTS,
+  TEXT_WEIGHTS,
+  TEXT_INPUT_STATES,
+  ICON_APPEARANCES
+} from "@chg-ds/unified-design-system";
+```

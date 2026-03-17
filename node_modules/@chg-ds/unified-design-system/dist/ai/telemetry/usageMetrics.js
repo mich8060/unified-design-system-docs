@@ -1,0 +1,1 @@
+const t={};function n(e){const c=`${e.metricType}:${e.name}`;t[c]=(t[c]??0)+(e.value??1)}function r(){return{...t}}function s(){Object.keys(t).forEach(e=>{delete t[e]})}export{r as getUsageMetrics,n as recordUsageMetric,s as resetUsageMetrics};

@@ -1,0 +1,3 @@
+import{j as n}from"./jsx-runtime-Cf8x2fCZ.js";import{A as s}from"./ActionMenu-BBxIMmAv.js";import"./index-yBjzXJbu.js";import"./index-Dx_1l3Sb.js";import"./_commonjsHelpers-CqkleIqs.js";import"./Icon-wzC9GJyU.js";import"./Divider-COSLK_FB.js";import"./Key-BtA7NM8N.js";import"./Toggle-dmgyufw-.js";const x={title:"UI/ActionMenu",component:s},r={render:()=>n.jsx(s,{})};var o,t,e;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: () => <ActionMenu />
+}`,...(e=(t=r.parameters)==null?void 0:t.docs)==null?void 0:e.source}}};const A=["Default"];export{r as Default,A as __namedExportsOrder,x as default};

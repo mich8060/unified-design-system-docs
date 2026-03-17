@@ -1,0 +1,1 @@
+import{jsx as o}from"react/jsx-runtime";import r from"../TextInput/TextInput.js";function i(e){return o(r,{type:"text",inputMode:"decimal",icon:"CurrencyDollar",iconPosition:"left",placeholder:e.placeholder??"0.00",...e})}export{i as CurrencyInput};

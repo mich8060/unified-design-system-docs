@@ -1,0 +1,10 @@
+import type { GovernanceConfig, VersionLineage } from "./types";
+export declare const AI_MANIFEST_VERSION = "1.0.0";
+export declare const AI_GOVERNANCE_VERSION = "1.0.0";
+export declare const AI_POLICY_VERSION = "1.0.0";
+export declare const AI_CONTRACT_SCHEMA_VERSION = "1.0.0";
+export declare const AI_COMPONENT_API_SCHEMA_VERSION = "1.0.0";
+export declare const AI_SCHEMA_VERSION = "1.0.0";
+export declare const AI_API_SCHEMA_VERSION = "1.0.0";
+export declare const UDSGovernance: GovernanceConfig;
+export declare function getVersionLineage(): VersionLineage;

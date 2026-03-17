@@ -1,0 +1,17 @@
+import{j as a}from"./jsx-runtime-Cf8x2fCZ.js";import{T as x}from"./Tag-B2cMEcqv.js";import{I as _}from"./Icon-wzC9GJyU.js";import"./index-yBjzXJbu.js";import"./index-Dx_1l3Sb.js";import"./_commonjsHelpers-CqkleIqs.js";const e="uds-event-card";function r({title:o="Title",type:f="travel",status:i="active",badge:s,icon:l=!1,startCap:d=!0,endCap:v=!0,onClick:t,className:g="",...y}){const u=d||l||!!s,b=[e,`${e}--${f}`,`${e}--${i}`,!d&&`${e}--no-start-cap`,!v&&`${e}--no-end-cap`,!u&&`${e}--bar-only`,t&&`${e}--clickable`,g].filter(Boolean).join(" "),C=t?"button":"div";return a.jsx(C,{className:b,onClick:t,type:t?"button":void 0,title:o,...y,children:a.jsxs("div",{className:`${e}__container`,children:[i==="pending"&&a.jsx("div",{className:`${e}__pattern`,"aria-hidden":"true"}),u&&a.jsxs("div",{className:`${e}__content`,children:[a.jsx("span",{className:`${e}__title`,children:o}),s&&a.jsx(x,{label:s,color:"inverse",solid:!0,rounded:!0,size:"compact"})]}),l&&a.jsx(_,{name:"CornersOut",size:16,appearance:"regular",className:`${e}__icon`})]})})}r.__docgenInfo={description:`EventCard (Blade) — A visual scheduling event bar for calendars and lists.
+
+Displays events as colored bars with type-based coloring (travel, assignment,
+unassigned), status styling (active, past, pending), optional badge, and
+optional expand icon. Supports startCap/endCap for multi-day spanning.
+
+@param {string}   title       - Event title text
+@param {string}   type        - Color type: "travel" | "assignment" | "unassigned"
+@param {string}   status      - Visual status: "active" | "past" | "pending"
+@param {string}   badge       - Badge label text (falsy to hide)
+@param {boolean}  icon        - Show CornersOut expand icon
+@param {boolean}  startCap    - Rounded left corners (true = start of event)
+@param {boolean}  endCap      - Rounded right corners (true = end of event)
+@param {function} onClick     - Click handler (renders as <button>)
+@param {string}   className   - Additional CSS classes`,methods:[],displayName:"EventCard",props:{title:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"Title"',computed:!1}},type:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"travel"',computed:!1}},status:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"active"',computed:!1}},badge:{required:!1,tsType:{name:"unknown"},description:""},icon:{required:!1,tsType:{name:"union",raw:"string | ReactNode",elements:[{name:"string"},{name:"ReactNode"}]},description:"",defaultValue:{value:"false",computed:!1}},startCap:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"true",computed:!1}},endCap:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"true",computed:!1}},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"(...args: unknown[]) => void",signature:{arguments:[{type:{name:"Array",elements:[{name:"unknown"}],raw:"unknown[]"},name:"args",rest:!0}],return:{name:"void"}}},description:""},className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}}},composes:["ButtonHTMLAttributes"]};const w={title:"UI/EventCard",component:r},n={render:()=>a.jsx(r,{})};var p,c,m;n.parameters={...n.parameters,docs:{...(p=n.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  render: () => <EventCard />
+}`,...(m=(c=n.parameters)==null?void 0:c.docs)==null?void 0:m.source}}};const q=["Default"];export{n as Default,q as __namedExportsOrder,w as default};

@@ -1,0 +1,8 @@
+import{j as e}from"./jsx-runtime-Cf8x2fCZ.js";function d({src:t,initials:r,status:n=!1,size:i="default",className:l="",alt:o="",...s}){const u=()=>{if(r)return r;if(s.name){const a=s.name.trim().split(/\s+/);return a.length>=2?(a[0][0]+a[a.length-1][0]).toUpperCase():a[0][0].toUpperCase()}return"?"},p=["avatar",i!=="default"?`avatar--${i}`:"",l].filter(Boolean).join(" ");return e.jsxs("div",{className:p,...s,children:[t?e.jsx("img",{src:t,alt:o||"User avatar",className:"avatar__image"}):e.jsx("span",{className:"avatar__initials",children:u()}),n&&e.jsx("span",{className:"avatar__status","aria-label":"Online status"})]})}d.__docgenInfo={description:`Avatar component for displaying user photos or initials
+@param {string} src - Image source URL for user photo
+@param {string} initials - Initials to display (e.g., "EB", "JD")
+@param {boolean} status - Whether to show the status indicator (green dot)
+@param {string} size - Size of the avatar: 'small', 'default', 'large' (default: 'default')
+@param {string} className - Additional CSS classes
+@param {string} alt - Alt text for the image
+@param {object} props - Additional props to pass to the avatar container`,methods:[],displayName:"Avatar",props:{src:{required:!1,tsType:{name:"unknown"},description:""},initials:{required:!1,tsType:{name:"unknown"},description:""},status:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},size:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"default"',computed:!1}},className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}},alt:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}}},composes:["ImgHTMLAttributes"]};export{d as A};

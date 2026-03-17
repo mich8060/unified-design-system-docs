@@ -1,0 +1,1 @@
+const e={decorators:[t=>(document.documentElement.setAttribute("data-brand","design-system"),document.documentElement.setAttribute("data-mode","light"),t())],parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}}}};export{e as default};

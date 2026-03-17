@@ -1,0 +1,2312 @@
+export declare const COMPONENT_API: {
+    readonly Accordion: {
+        readonly name: "Accordion";
+        readonly source: "src/design-system/components/Accordion/Accordion.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly ActionMenu: {
+        readonly name: "ActionMenu";
+        readonly source: "src/design-system/components/ActionMenu/ActionMenu.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Menu", "Table"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly AppShell: {
+        readonly name: "AppShell";
+        readonly source: "src/design-system/components/AppShell/AppShell.spec.ts";
+        readonly tier: 1;
+        readonly purpose: "Top-level application shell that composes menu, listview, main, side panel, and footer regions for consistent page architecture.";
+        readonly props: {
+            readonly brand: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "comphealth", "weatherby", "connect", "locumsmart", "modio", "gms", "chg", "wireframe"];
+                readonly default: "default";
+            };
+            readonly theme: {
+                readonly type: "enum";
+                readonly values: readonly ["light", "dark"];
+                readonly default: "light";
+            };
+        };
+        readonly defaults: {
+            readonly brand: "default";
+            readonly theme: "light";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-surface-primary", "--uds-text-primary", "--uds-border-primary", "--uds-spacing-24"];
+        readonly accessibility: {
+            readonly role: "application";
+            readonly keyboard: readonly ["Tab"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["Menu", "Listview", "Main", "SidePanel", "Footer", "Container", "Layout", "Text", "Button"];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Avatar: {
+        readonly name: "Avatar";
+        readonly source: "src/design-system/components/Avatar/Avatar.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "string";
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Table"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Badge: {
+        readonly name: "Badge";
+        readonly source: "src/design-system/components/Badge/Badge.spec.ts";
+        readonly props: {
+            readonly variant: {
+                readonly type: "enum";
+                readonly values: readonly ["blue", "cyan", "green", "magenta", "indigo", "rose", "neutral", "orange", "purple", "red", "sky", "yellow", "inverse", "lime"];
+                readonly default: "red";
+            };
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["solid", "outlined"];
+                readonly default: "solid";
+            };
+            readonly rounded: {
+                readonly type: "boolean";
+                readonly default: true;
+            };
+        };
+        readonly defaults: {
+            readonly variant: "red";
+            readonly appearance: "solid";
+            readonly rounded: true;
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Branding: {
+        readonly name: "Branding";
+        readonly source: "src/design-system/components/Branding/Branding.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "string";
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Breadcrumb: {
+        readonly name: "Breadcrumb";
+        readonly source: "src/design-system/components/Breadcrumb/Breadcrumb.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Button: {
+        readonly name: "Button";
+        readonly source: "src/design-system/components/Button/Button.spec.ts";
+        readonly props: {
+            readonly layout: {
+                readonly type: "enum";
+                readonly values: readonly ["label-only", "icon-left", "icon-right", "icon-only", "only"];
+                readonly default: "label-only";
+            };
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["primary", "soft", "outline", "text", "ghost", "disabled", "destructive"];
+                readonly default: "primary";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["large", "default", "small", "xsmall"];
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly layout: "label-only";
+            readonly appearance: "primary";
+            readonly size: "default";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["AppShell", "Container", "Layout", "Modal", "Table", "Tabs"];
+            readonly disallowedChildren: readonly ["Button"];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly ButtonGroup: {
+        readonly name: "ButtonGroup";
+        readonly source: "src/design-system/components/ButtonGroup/ButtonGroup.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Groups related button actions with consistent spacing and orientation.";
+        readonly props: {
+            readonly orientation: {
+                readonly type: "enum";
+                readonly values: readonly ["horizontal", "vertical"];
+                readonly default: "horizontal";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["xsmall", "small", "default", "large"];
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly orientation: "horizontal";
+            readonly size: "default";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-spacing-8", "--uds-spacing-16"];
+        readonly accessibility: {
+            readonly role: "group";
+            readonly keyboard: readonly ["Tab", "Enter", "Space"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not set button appearances in ButtonGroup options; grouped buttons are outline only.", "Do not mix unrelated actions in one ButtonGroup."];
+    };
+    readonly Calendar: {
+        readonly name: "Calendar";
+        readonly source: "src/design-system/components/Calendar/Calendar.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Checkbox: {
+        readonly name: "Checkbox";
+        readonly source: "src/design-system/components/Checkbox/Checkbox.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly CheckboxGroup: {
+        readonly name: "CheckboxGroup";
+        readonly source: "src/design-system/components/CheckboxGroup/CheckboxGroup.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Provides grouped multi-select choices using Checkbox controls.";
+        readonly props: {
+            readonly orientation: {
+                readonly type: "enum";
+                readonly values: readonly ["vertical", "horizontal"];
+                readonly default: "vertical";
+            };
+            readonly disabled: {
+                readonly type: "boolean";
+                readonly default: false;
+            };
+        };
+        readonly defaults: {
+            readonly orientation: "vertical";
+            readonly disabled: false;
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-spacing-8", "--uds-spacing-16", "--uds-text-primary"];
+        readonly accessibility: {
+            readonly role: "group";
+            readonly keyboard: readonly ["Tab", "Space"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not use CheckboxGroup when only one value may be selected.", "Do not hide option labels."];
+    };
+    readonly Checklist: {
+        readonly name: "Checklist";
+        readonly source: "src/design-system/components/Checklist/Checklist.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Sidebar checklist for multi-step flows with completion status.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default", "active", "completed", "disabled"];
+        readonly tokensUsed: readonly ["--uds-surface-primary", "--uds-border-primary", "--uds-text-primary", "--uds-text-secondary", "--uds-surface-brand-primary", "--uds-spacing-8", "--uds-spacing-12", "--uds-spacing-20", "--uds-spacing-24"];
+        readonly accessibility: {
+            readonly role: "navigation";
+            readonly keyboard: readonly ["Tab", "Enter", "Space"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Chip: {
+        readonly name: "Chip";
+        readonly source: "src/design-system/components/Chip/Chip.spec.ts";
+        readonly props: {
+            readonly selected: {
+                readonly type: "boolean";
+                readonly default: false;
+            };
+            readonly shape: {
+                readonly type: "enum";
+                readonly values: readonly ["pill", "rounded"];
+                readonly default: "pill";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "compact", "mini"];
+                readonly default: "default";
+            };
+            readonly iconPlacement: {
+                readonly type: "enum";
+                readonly values: readonly ["both", "left", "right", "none"];
+                readonly default: "none";
+            };
+            readonly badgeVariant: {
+                readonly type: "string";
+                readonly default: "sky";
+            };
+        };
+        readonly defaults: {
+            readonly selected: false;
+            readonly shape: "pill";
+            readonly size: "default";
+            readonly iconPlacement: "none";
+            readonly badgeVariant: "sky";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {
+                readonly iconplacement: "iconPlacement";
+            };
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Code: {
+        readonly name: "Code";
+        readonly source: "src/design-system/components/Code/Code.spec.ts";
+        readonly props: {
+            readonly language: {
+                readonly type: "enum";
+                readonly values: readonly ["markup", "css", "clike", "javascript", "typescript", "tsx", "jsx", "json", "bash", "sql"];
+                readonly default: "javascript";
+            };
+            readonly inline: {
+                readonly type: "enum";
+                readonly values: readonly [true, false];
+                readonly default: false;
+            };
+        };
+        readonly defaults: {
+            readonly language: "javascript";
+            readonly inline: false;
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Container: {
+        readonly name: "Container";
+        readonly source: "src/design-system/components/Container/Container.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Provides a reusable content wrapper with optional filled or transparent surface styles and standardized padding.";
+        readonly props: {
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "transparent"];
+                readonly default: "transparent";
+            };
+            readonly padding: {
+                readonly type: "enum";
+                readonly values: readonly ["none", "xsmall", "small", "default", "large", "xlarge"];
+                readonly default: "large";
+            };
+            readonly paddingX: {
+                readonly type: "enum";
+                readonly values: readonly ["none", "xsmall", "small", "default", "large", "xlarge"];
+                readonly default: "large";
+            };
+            readonly paddingY: {
+                readonly type: "enum";
+                readonly values: readonly ["none", "xsmall", "small", "default", "large", "xlarge"];
+                readonly default: "large";
+            };
+        };
+        readonly defaults: {
+            readonly appearance: "transparent";
+            readonly padding: "large";
+            readonly paddingX: "large";
+            readonly paddingY: "large";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-surface-secondary", "--uds-border-width-1", "--uds-border-primary", "--uds-radius-8", "--uds-spacing-0", "--uds-spacing-8", "--uds-spacing-12", "--uds-spacing-16", "--uds-spacing-24", "--uds-spacing-32"];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["Layout", "Table", "Text", "Button", "Field", "Divider", "Tag"];
+            readonly allowedParents: readonly ["AppShell", "root"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not use Container for semantic landmarks where <section>, <article>, or <aside> is required.", "Do not hardcode spacing values on top of Container padding variants."];
+    };
+    readonly CurrencyInput: {
+        readonly name: "CurrencyInput";
+        readonly source: "src/design-system/components/CurrencyInput/CurrencyInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly DateInput: {
+        readonly name: "DateInput";
+        readonly source: "src/design-system/components/DateInput/DateInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Datepicker: {
+        readonly name: "Datepicker";
+        readonly source: "src/design-system/components/Datepicker/Datepicker.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "string";
+                readonly default: "desktop";
+            };
+        };
+        readonly defaults: {
+            readonly size: "desktop";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field", "Modal"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly DateRangeInput: {
+        readonly name: "DateRangeInput";
+        readonly source: "src/design-system/components/DateRangeInput/DateRangeInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Dialog: {
+        readonly name: "Dialog";
+        readonly source: "src/design-system/components/Dialog/Dialog.spec.ts";
+        readonly props: {
+            readonly intent: {
+                readonly type: "string";
+                readonly default: "info";
+            };
+            readonly confirmLabel: {
+                readonly type: "string";
+                readonly default: "Confirm";
+            };
+            readonly cancelLabel: {
+                readonly type: "string";
+                readonly default: "Cancel";
+            };
+        };
+        readonly defaults: {
+            readonly intent: "info";
+            readonly confirmLabel: "Confirm";
+            readonly cancelLabel: "Cancel";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly ["Dialog"];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Divider: {
+        readonly name: "Divider";
+        readonly source: "src/design-system/components/Divider/Divider.spec.ts";
+        readonly props: {
+            readonly alignment: {
+                readonly type: "enum";
+                readonly values: readonly ["left", "center", "right"];
+                readonly default: "center";
+            };
+            readonly variant: {
+                readonly type: "enum";
+                readonly values: readonly ["line", "solid"];
+                readonly default: "line";
+            };
+        };
+        readonly defaults: {
+            readonly alignment: "center";
+            readonly variant: "line";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Container", "Modal"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly DotStatus: {
+        readonly name: "DotStatus";
+        readonly source: "src/design-system/components/DotStatus/DotStatus.spec.ts";
+        readonly props: {
+            readonly variant: {
+                readonly type: "enum";
+                readonly values: readonly ["red", "blue", "inverse", "orange", "sky", "indigo", "rose", "neutral", "celery", "lime", "yellow", "green", "cyan", "purple", "fuchsia"];
+                readonly default: "blue";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["small", "medium", "large"];
+                readonly default: "medium";
+            };
+            readonly outline: {
+                readonly type: "boolean";
+                readonly default: false;
+            };
+        };
+        readonly defaults: {
+            readonly variant: "blue";
+            readonly size: "medium";
+            readonly outline: false;
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Table"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Dropdown: {
+        readonly name: "Dropdown";
+        readonly source: "src/design-system/components/Dropdown/Dropdown.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["compact", "default"];
+                readonly default: "default";
+            };
+            readonly state: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "focused", "error", "disabled"];
+                readonly default: "default";
+            };
+            readonly placeholder: {
+                readonly type: "string";
+                readonly default: "Select an option";
+            };
+            readonly placement: {
+                readonly type: "string";
+                readonly default: "bottom-start";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+            readonly state: "default";
+            readonly placeholder: "Select an option";
+            readonly placement: "bottom-start";
+        };
+        readonly states: readonly ["default", "focused", "error", "disabled"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field", "Menu", "Modal"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly EmptyState: {
+        readonly name: "EmptyState";
+        readonly source: "src/design-system/components/EmptyState/EmptyState.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Provide a clear, branded fallback when a section has no content, data, or search results.";
+        readonly props: {
+            readonly align: {
+                readonly type: "enum";
+                readonly values: readonly ["left", "center"];
+                readonly default: "center";
+            };
+        };
+        readonly defaults: {
+            readonly align: "center";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-surface-secondary", "--uds-border-primary", "--uds-radius-8", "--uds-text-primary", "--uds-text-secondary", "--uds-spacing-24"];
+        readonly accessibility: {
+            readonly role: "region";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not use EmptyState when content is loading; use a loading indicator instead.", "Do not place multiple primary actions inside a single EmptyState."];
+    };
+    readonly EventCard: {
+        readonly name: "EventCard";
+        readonly source: "src/design-system/components/EventCard/EventCard.spec.ts";
+        readonly props: {
+            readonly title: {
+                readonly type: "string";
+                readonly default: "Title";
+            };
+            readonly type: {
+                readonly type: "string";
+                readonly default: "travel";
+            };
+            readonly status: {
+                readonly type: "string";
+                readonly default: "active";
+            };
+        };
+        readonly defaults: {
+            readonly title: "Title";
+            readonly type: "travel";
+            readonly status: "active";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Field: {
+        readonly name: "Field";
+        readonly source: "src/design-system/components/Field/Field.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["TextInput", "Input", "Dropdown", "Datepicker", "Textarea", "Checkbox", "Radio", "Toggle", "Slider", "FileUpload"];
+            readonly allowedParents: readonly ["Container", "Modal", "Tabs"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly FileUpload: {
+        readonly name: "FileUpload";
+        readonly source: "src/design-system/components/FileUpload/FileUpload.spec.ts";
+        readonly props: {
+            readonly instructionText: {
+                readonly type: "string";
+                readonly default: "Drop files here or click to upload";
+            };
+        };
+        readonly defaults: {
+            readonly instructionText: "Drop files here or click to upload";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Flex: {
+        readonly name: "Flex";
+        readonly source: "src/design-system/components/Flex/Flex.spec.ts";
+        readonly tier: 1;
+        readonly purpose: "Creates token-driven flexbox layouts with controlled direction, alignment, wrapping, and spacing.";
+        readonly props: {
+            readonly direction: {
+                readonly type: "enum";
+                readonly values: readonly ["row", "column"];
+                readonly default: "row";
+            };
+            readonly justifyContent: {
+                readonly type: "enum";
+                readonly values: readonly ["flex-start", "center", "flex-end", "space-between", "space-around", "space-evenly"];
+                readonly default: "flex-start";
+            };
+            readonly alignItems: {
+                readonly type: "enum";
+                readonly values: readonly ["stretch", "flex-start", "center", "flex-end", "baseline"];
+                readonly default: "stretch";
+            };
+            readonly wrap: {
+                readonly type: "enum";
+                readonly values: readonly ["nowrap", "wrap", "wrap-reverse"];
+                readonly default: "nowrap";
+            };
+        };
+        readonly defaults: {
+            readonly direction: "row";
+            readonly justifyContent: "flex-start";
+            readonly alignItems: "stretch";
+            readonly wrap: "nowrap";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-gap-*", "--uds-spacing-*"];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly ["Tab"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Icon: {
+        readonly name: "Icon";
+        readonly source: "src/design-system/components/Icon/Icon.spec.ts";
+        readonly props: {
+            readonly appearance: {
+                readonly type: "string";
+                readonly default: "regular";
+            };
+        };
+        readonly defaults: {
+            readonly appearance: "regular";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Menu"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly ImageAspect: {
+        readonly name: "ImageAspect";
+        readonly source: "src/design-system/components/ImageAspect/ImageAspect.spec.ts";
+        readonly props: {
+            readonly aspectratio: {
+                readonly type: "enum";
+                readonly values: readonly ["square", "video", "4-3", "3-2", "21-9", "portrait", "auto"];
+            };
+            readonly ratio: {
+                readonly type: "string";
+                readonly default: "square";
+            };
+        };
+        readonly defaults: {
+            readonly ratio: "square";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Key: {
+        readonly name: "Key";
+        readonly source: "src/design-system/components/Key/Key.spec.ts";
+        readonly props: {
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["light", "dark"];
+                readonly default: "light";
+            };
+        };
+        readonly defaults: {
+            readonly appearance: "light";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Layout: {
+        readonly name: "Layout";
+        readonly source: "src/design-system/components/Layout/Layout.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Creates token-driven flexbox layouts with controlled direction, alignment, wrapping, and width behavior.";
+        readonly props: {
+            readonly fullWidth: {
+                readonly type: "boolean";
+                readonly default: false;
+            };
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["full", "equal", "right", "left"];
+                readonly default: "full";
+            };
+        };
+        readonly defaults: {
+            readonly fullWidth: false;
+            readonly appearance: "full";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["AppShell", "Container"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Link: {
+        readonly name: "Link";
+        readonly source: "src/design-system/components/Link/Link.spec.ts";
+        readonly tier: 1;
+        readonly purpose: "Provides inline navigation and action links using semantic text-link tokens.";
+        readonly props: {
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["primary", "secondary"];
+                readonly default: "primary";
+            };
+            readonly underline: {
+                readonly type: "enum";
+                readonly values: readonly ["always", "hover", "none"];
+                readonly default: "always";
+            };
+            readonly disabled: {
+                readonly type: "boolean";
+                readonly default: false;
+            };
+        };
+        readonly defaults: {
+            readonly appearance: "primary";
+            readonly underline: "always";
+            readonly disabled: false;
+        };
+        readonly states: readonly ["default", "hover", "active", "visited", "focus", "disabled"];
+        readonly tokensUsed: readonly ["--uds-text-link-primary-default", "--uds-text-link-primary-hover", "--uds-text-link-primary-active", "--uds-text-link-primary-visited", "--uds-text-link-secondary-default", "--uds-text-link-secondary-hover", "--uds-text-link-secondary-active", "--uds-text-link-secondary-visited", "--uds-focus-ring-width", "--uds-focus-ring-border", "--uds-focus-ring-offset"];
+        readonly accessibility: {
+            readonly role: "link";
+            readonly keyboard: readonly ["Enter activates link", "Tab/Shift+Tab moves focus"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Using Link for button-like actions that do not navigate.", "Relying on color only without visible text for meaning."];
+    };
+    readonly Medallion: {
+        readonly name: "Medallion";
+        readonly source: "src/design-system/components/Medallion/Medallion.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Displays an icon inside a colorized shape for compact visual context.";
+        readonly props: {
+            readonly shape: {
+                readonly type: "enum";
+                readonly values: readonly ["circle", "square", "roundedSquare", "diamond"];
+                readonly default: "circle";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["small", "default", "large", "xl"];
+                readonly default: "default";
+            };
+            readonly color: {
+                readonly type: "enum";
+                readonly values: readonly ["transparent", "neutral", "red", "orange", "yellow", "emerald", "green", "sky", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta", "inverse"];
+                readonly default: "neutral";
+            };
+        };
+        readonly defaults: {
+            readonly shape: "circle";
+            readonly size: "default";
+            readonly color: "neutral";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-color-accent-*-100", "--uds-color-accent-*-700", "--uds-surface-secondary", "--uds-border-primary"];
+        readonly accessibility: {
+            readonly role: "img";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Menu: {
+        readonly name: "Menu";
+        readonly source: "src/design-system/components/Menu/Menu.spec.ts";
+        readonly props: {
+            readonly identity: {
+                readonly type: "string";
+                readonly default: "design-system";
+            };
+        };
+        readonly defaults: {
+            readonly identity: "design-system";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["ActionMenu", "Dropdown", "Toggle", "Text", "Icon"];
+            readonly allowedParents: readonly ["AppShell", "root"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly MicroCalendar: {
+        readonly name: "MicroCalendar";
+        readonly source: "src/design-system/components/MicroCalendar/MicroCalendar.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Modal: {
+        readonly name: "Modal";
+        readonly source: "src/design-system/components/Modal/Modal.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["small", "default", "large", "fullscreen"];
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["Text", "Button", "Divider", "Field", "TextInput", "Dropdown", "Datepicker", "Textarea", "Tag"];
+            readonly allowedParents: readonly ["AppShell", "Container", "root"];
+            readonly disallowedChildren: readonly ["Modal"];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly NumberInput: {
+        readonly name: "NumberInput";
+        readonly source: "src/design-system/components/NumberInput/NumberInput.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["compact", "default"];
+                readonly default: "default";
+            };
+            readonly state: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "focused", "error", "disabled"];
+                readonly default: "default";
+            };
+            readonly type: {
+                readonly type: "string";
+                readonly default: "number";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+            readonly state: "default";
+            readonly type: "number";
+        };
+        readonly states: readonly ["default", "focused", "error", "disabled"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Pagination: {
+        readonly name: "Pagination";
+        readonly source: "src/design-system/components/Pagination/Pagination.spec.ts";
+        readonly props: {
+            readonly variant: {
+                readonly type: "string";
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly variant: "default";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly PasswordInput: {
+        readonly name: "PasswordInput";
+        readonly source: "src/design-system/components/PasswordInput/PasswordInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly PhoneInput: {
+        readonly name: "PhoneInput";
+        readonly source: "src/design-system/components/PhoneInput/PhoneInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly ProgressCircle: {
+        readonly name: "ProgressCircle";
+        readonly source: "src/design-system/components/ProgressCircle/ProgressCircle.spec.ts";
+        readonly props: {
+            readonly shape: {
+                readonly type: "enum";
+                readonly values: readonly ["circle", "half-circle"];
+                readonly default: "circle";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["xxs", "xs", "sm", "md", "lg"];
+                readonly default: "md";
+            };
+        };
+        readonly defaults: {
+            readonly shape: "circle";
+            readonly size: "md";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly ProgressIndicator: {
+        readonly name: "ProgressIndicator";
+        readonly source: "src/design-system/components/ProgressIndicator/ProgressIndicator.spec.ts";
+        readonly props: {
+            readonly labelPosition: {
+                readonly type: "enum";
+                readonly values: readonly ["false", "right", "bottom", "top-floating", "bottom-floating"];
+                readonly default: false;
+            };
+            readonly variant: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "blue", "green", "success", "orange", "warning", "red", "error", "purple"];
+                readonly default: "default";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["small", "medium", "large"];
+                readonly default: "medium";
+            };
+        };
+        readonly defaults: {
+            readonly labelPosition: false;
+            readonly variant: "default";
+            readonly size: "medium";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Table"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly ProvidersCard: {
+        readonly name: "ProvidersCard";
+        readonly source: "src/design-system/components/ProvidersCard/ProvidersCard.spec.ts";
+        readonly tier: 3;
+        readonly purpose: "Displays provider identity, status, metadata, tags, and quick actions in a compact card.";
+        readonly props: {
+            readonly statusVariant: {
+                readonly type: "enum";
+                readonly values: readonly ["green", "orange", "red", "blue", "neutral"];
+                readonly default: "green";
+            };
+        };
+        readonly defaults: {
+            readonly statusVariant: "green";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-spacing-16", "--uds-spacing-12", "--uds-border-width-1", "--uds-border-primary", "--uds-radius-8", "--uds-surface-primary"];
+        readonly accessibility: {
+            readonly role: "group";
+            readonly keyboard: readonly ["Tab", "Enter", "Space"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not use ProvidersCard for tabular datasets where rows and sorting are required.", "Do not replace action buttons with non-interactive text when actions are expected."];
+    };
+    readonly Radio: {
+        readonly name: "Radio";
+        readonly source: "src/design-system/components/Radio/Radio.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly RadioGroup: {
+        readonly name: "RadioGroup";
+        readonly source: "src/design-system/components/RadioGroup/RadioGroup.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Provides grouped single-select choices using Radio controls.";
+        readonly props: {
+            readonly orientation: {
+                readonly type: "enum";
+                readonly values: readonly ["vertical", "horizontal"];
+                readonly default: "vertical";
+            };
+            readonly disabled: {
+                readonly type: "boolean";
+                readonly default: false;
+            };
+        };
+        readonly defaults: {
+            readonly orientation: "vertical";
+            readonly disabled: false;
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-spacing-8", "--uds-spacing-16", "--uds-text-primary"];
+        readonly accessibility: {
+            readonly role: "radiogroup";
+            readonly keyboard: readonly ["Tab", "ArrowUp", "ArrowDown", "Space"];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not use RadioGroup when users can select more than one option.", "Do not omit visible labels when context is unclear."];
+    };
+    readonly ScrollView: {
+        readonly name: "ScrollView";
+        readonly source: "src/design-system/components/ScrollView/ScrollView.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Provides a container with controlled scroll direction.";
+        readonly props: {
+            readonly direction: {
+                readonly type: "enum";
+                readonly values: readonly ["vertical", "horizontal"];
+                readonly default: "vertical";
+            };
+        };
+        readonly defaults: {
+            readonly direction: "vertical";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly SearchInput: {
+        readonly name: "SearchInput";
+        readonly source: "src/design-system/components/SearchInput/SearchInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly SectionHeader: {
+        readonly name: "SectionHeader";
+        readonly source: "src/design-system/components/SectionHeader/SectionHeader.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Slider: {
+        readonly name: "Slider";
+        readonly source: "src/design-system/components/Slider/Slider.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Statistics: {
+        readonly name: "Statistics";
+        readonly source: "src/design-system/components/Statistics/Statistics.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Displays a KPI value with optional context, trend, and icon.";
+        readonly props: {
+            readonly trend: {
+                readonly type: "enum";
+                readonly values: readonly ["up", "down", "neutral"];
+                readonly default: "neutral";
+            };
+            readonly iconAccent: {
+                readonly type: "enum";
+                readonly values: readonly ["amber", "aqua", "blue", "cyan", "emerald", "fuchsia", "green", "indigo", "lime", "magenta", "orange", "purple", "red", "rose", "sky", "violet", "yellow"];
+                readonly default: "blue";
+            };
+        };
+        readonly defaults: {
+            readonly trend: "neutral";
+            readonly iconAccent: "blue";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-surface-secondary", "--uds-surface-primary", "--uds-border-primary", "--uds-radius-8", "--uds-text-secondary", "--uds-system-success-primary", "--uds-system-destructive-primary"];
+        readonly accessibility: {
+            readonly role: "status";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not use Statistics for interactive controls.", "Do not place long paragraph content inside helper text."];
+    };
+    readonly Status: {
+        readonly name: "Status";
+        readonly source: "src/design-system/components/Status/Status.spec.ts";
+        readonly props: {
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["light-gray", "white", "transparent"];
+                readonly default: "light-gray";
+            };
+            readonly shape: {
+                readonly type: "enum";
+                readonly values: readonly ["pill", "rounded"];
+                readonly default: "pill";
+            };
+            readonly variant: {
+                readonly type: "string";
+                readonly default: "blue";
+            };
+        };
+        readonly defaults: {
+            readonly appearance: "light-gray";
+            readonly shape: "pill";
+            readonly variant: "blue";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Table"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Steps: {
+        readonly name: "Steps";
+        readonly source: "src/design-system/components/Steps/Steps.spec.ts";
+        readonly props: {
+            readonly orientation: {
+                readonly type: "enum";
+                readonly values: readonly ["horizontal", "vertical"];
+                readonly default: "horizontal";
+            };
+            readonly status: {
+                readonly type: "enum";
+                readonly values: readonly ["complete", "active", "incomplete", "disabled", "error"];
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "compact"];
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly orientation: "horizontal";
+            readonly size: "default";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Table: {
+        readonly name: "Table";
+        readonly source: "src/design-system/components/Table/Table.spec.ts";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["Tag", "Status", "Avatar", "Button", "ActionMenu", "ProgressIndicator", "DotStatus"];
+            readonly allowedParents: readonly ["Container", "Tabs"];
+            readonly disallowedChildren: readonly ["Table"];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Tabs: {
+        readonly name: "Tabs";
+        readonly source: "src/design-system/components/Tabs/Tabs.spec.ts";
+        readonly props: {
+            readonly orientation: {
+                readonly type: "enum";
+                readonly values: readonly ["horizontal", "vertical"];
+                readonly default: "horizontal";
+            };
+            readonly appearance: {
+                readonly type: "string";
+                readonly default: "underline";
+            };
+            readonly tagVariant: {
+                readonly type: "string";
+                readonly default: "neutral";
+            };
+        };
+        readonly defaults: {
+            readonly orientation: "horizontal";
+            readonly appearance: "underline";
+            readonly tagVariant: "neutral";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly ["Text", "Tag", "Button", "Table", "Field"];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Tag: {
+        readonly name: "Tag";
+        readonly source: "src/design-system/components/Tag/Tag.spec.ts";
+        readonly props: {
+            readonly pastel: {
+                readonly type: "enum";
+                readonly values: readonly [true, false];
+                readonly default: false;
+            };
+            readonly outlined: {
+                readonly type: "enum";
+                readonly values: readonly [true, false];
+                readonly default: false;
+            };
+            readonly appearance: {
+                readonly type: "enum";
+                readonly values: readonly ["label-only", "icon-left"];
+                readonly default: "label-only";
+            };
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["compact", "default"];
+                readonly default: "compact";
+            };
+            readonly color: {
+                readonly type: "enum";
+                readonly values: readonly ["transparent", "neutral", "red", "orange", "yellow", "emerald", "green", "sky", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta", "inverse"];
+                readonly default: "transparent";
+            };
+            readonly label: {
+                readonly type: "string";
+                readonly default: "Label";
+            };
+        };
+        readonly defaults: {
+            readonly pastel: false;
+            readonly outlined: false;
+            readonly appearance: "label-only";
+            readonly size: "compact";
+            readonly color: "transparent";
+            readonly label: "Label";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Container", "Modal", "Table", "Tabs"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Text: {
+        readonly name: "Text";
+        readonly source: "src/design-system/components/Text/Text.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Applies UDS typography variants with governed weight and leading options while preserving semantic tags via `as`.";
+        readonly props: {
+            readonly variant: {
+                readonly type: "enum";
+                readonly values: readonly ["display-128", "display-96", "display-72", "display-60", "display-48", "display-36", "heading-32", "heading-28", "heading-24", "body-20", "body-16", "body-14", "body-12"];
+                readonly default: "body-16";
+            };
+            readonly weight: {
+                readonly type: "enum";
+                readonly values: readonly ["regular", "medium", "semibold", "bold"];
+                readonly default: "regular";
+            };
+            readonly leading: {
+                readonly type: "enum";
+                readonly values: readonly ["tight", "regular", "loose"];
+                readonly default: "regular";
+            };
+        };
+        readonly defaults: {
+            readonly variant: "body-16";
+            readonly weight: "regular";
+            readonly leading: "regular";
+        };
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-font-family", "--uds-font-size-*", "--uds-line-*", "--uds-font-weight*", "--uds-type-*"];
+        readonly accessibility: {
+            readonly role: "text";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["AppShell", "Container", "Layout", "Menu", "Modal", "Tabs"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly ["Do not set font-size/line-height directly on consumer elements; use Text variant + leading.", "Do not reintroduce tailwind-like typography utilities that bypass semantic tokens."];
+    };
+    readonly Textarea: {
+        readonly name: "Textarea";
+        readonly source: "src/design-system/components/Textarea/Textarea.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["compact", "default"];
+                readonly default: "default";
+            };
+            readonly state: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "focused", "error", "disabled"];
+                readonly default: "default";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+            readonly state: "default";
+        };
+        readonly states: readonly ["default", "focused", "error", "disabled"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field", "Modal"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly TextInput: {
+        readonly name: "TextInput";
+        readonly source: "src/design-system/components/TextInput/TextInput.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["compact", "default"];
+                readonly default: "default";
+            };
+            readonly state: {
+                readonly type: "enum";
+                readonly values: readonly ["default", "focused", "error", "disabled"];
+                readonly default: "default";
+            };
+            readonly type: {
+                readonly type: "string";
+                readonly default: "text";
+            };
+            readonly iconPosition: {
+                readonly type: "string";
+                readonly default: "right";
+            };
+        };
+        readonly defaults: {
+            readonly size: "default";
+            readonly state: "default";
+            readonly type: "text";
+            readonly iconPosition: "right";
+        };
+        readonly states: readonly ["default", "focused", "error", "disabled"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field", "Modal"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly TimeInput: {
+        readonly name: "TimeInput";
+        readonly source: "src/design-system/components/TimeInput/TimeInput.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Describe purpose.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly role: "generic";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Toast: {
+        readonly name: "Toast";
+        readonly source: "src/design-system/components/Toast/Toast.spec.ts";
+        readonly props: {
+            readonly variant: {
+                readonly type: "enum";
+                readonly values: readonly ["success", "error", "warning", "info"];
+                readonly default: "info";
+            };
+        };
+        readonly defaults: {
+            readonly variant: "info";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly ["Modal", "Dialog"];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Toggle: {
+        readonly name: "Toggle";
+        readonly source: "src/design-system/components/Toggle/Toggle.spec.ts";
+        readonly props: {
+            readonly size: {
+                readonly type: "enum";
+                readonly values: readonly ["large", "small"];
+                readonly default: "large";
+            };
+        };
+        readonly defaults: {
+            readonly size: "large";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly ["Field", "Menu"];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Toolbar: {
+        readonly name: "Toolbar";
+        readonly source: "src/design-system/components/Toolbar/Toolbar.spec.ts";
+        readonly tier: 2;
+        readonly purpose: "Top action bar with three composable slots: left, center, and right.";
+        readonly props: {};
+        readonly defaults: {};
+        readonly states: readonly ["default"];
+        readonly tokensUsed: readonly ["--uds-surface-primary", "--uds-border-primary", "--uds-spacing-8", "--uds-spacing-12", "--uds-spacing-16"];
+        readonly accessibility: {
+            readonly role: "toolbar";
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+    readonly Tooltip: {
+        readonly name: "Tooltip";
+        readonly source: "src/design-system/components/Tooltip/Tooltip.spec.ts";
+        readonly props: {
+            readonly placement: {
+                readonly type: "enum";
+                readonly values: readonly ["top", "bottom", "left", "right"];
+                readonly default: "top";
+            };
+        };
+        readonly defaults: {
+            readonly placement: "top";
+        };
+        readonly states: readonly [];
+        readonly tokensUsed: readonly [];
+        readonly accessibility: {
+            readonly keyboard: readonly [];
+        };
+        readonly composition: {
+            readonly allowedChildren: readonly [];
+            readonly allowedParents: readonly [];
+            readonly disallowedChildren: readonly [];
+        };
+        readonly aliases: {
+            readonly props: {};
+        };
+        readonly ambiguity: {
+            readonly propNameCollisions: readonly [];
+            readonly hadAliasNormalization: false;
+        };
+        readonly antiPatterns: readonly [];
+    };
+};
+export type ComponentApiMap = typeof COMPONENT_API;
+export type ComponentName = keyof ComponentApiMap;
+export type ComponentApi = ComponentApiMap[ComponentName];

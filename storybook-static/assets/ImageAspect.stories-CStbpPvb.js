@@ -1,0 +1,8 @@
+import{j as a}from"./jsx-runtime-Cf8x2fCZ.js";import"./index-yBjzXJbu.js";const e="uds-image-aspect",i={square:"square",video:"video","4-3":"4-3","3-2":"3-2","21-9":"21-9",portrait:"portrait",auto:"auto"};function t({ratio:r="square",src:o,alt:m="",className:l="",...d}){const u=[e,i[r]&&`${e}--${i[r]}`,l].filter(Boolean).join(" ");return a.jsx("div",{className:u,children:o?a.jsx("img",{src:o,alt:m,className:`${e}__image`,...d}):a.jsx("div",{className:`${e}__placeholder`,children:a.jsx("span",{className:`${e}__placeholder-text`,children:"Image"})})})}t.__docgenInfo={description:`ImageAspect component for maintaining consistent aspect ratios for images
+@param {string} ratio - Aspect ratio variant: 'square', 'video', '4-3', '3-2', '21-9', 'portrait', 'auto'
+@param {string} src - Image source URL
+@param {string} alt - Alt text for the image
+@param {string} className - Additional CSS classes
+@param {object} props - Additional props to pass to the image element`,methods:[],displayName:"ImageAspect",props:{ratio:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"square"',computed:!1}},src:{required:!1,tsType:{name:"unknown"},description:""},alt:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}},className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}}},composes:["ImgHTMLAttributes"]};const A={title:"UI/ImageAspect",component:t},s={render:()=>a.jsx(t,{})};var n,p,c;s.parameters={...s.parameters,docs:{...(n=s.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: () => <ImageAspect />
+}`,...(c=(p=s.parameters)==null?void 0:p.docs)==null?void 0:c.source}}};const _=["Default"];export{s as Default,_ as __namedExportsOrder,A as default};

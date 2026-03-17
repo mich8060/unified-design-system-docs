@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const t=require("react/jsx-runtime"),n=require("../TextInput/TextInput.cjs");function r(e){return t.jsx(n.default,{type:"text",inputMode:"decimal",icon:"CurrencyDollar",iconPosition:"left",placeholder:e.placeholder??"0.00",...e})}exports.CurrencyInput=r;

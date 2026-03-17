@@ -1,0 +1,12 @@
+import{j as e}from"./jsx-runtime-Cf8x2fCZ.js";import"./index-yBjzXJbu.js";function r({checked:t=!1,onChange:o,name:p,id:m,value:c,label:s,disabled:n=!1,className:f="",...h}){const i=m||`radio-${Math.random().toString(36).substr(2,9)}`,b=g=>{!n&&o&&o(g)};return e.jsxs("label",{className:`radio ${n?"radio--disabled":""} ${f}`,htmlFor:i,children:[e.jsx("input",{type:"radio",id:i,name:p,value:c,className:"radio__input",checked:t,onChange:b,disabled:n,...h}),e.jsx("span",{className:"radio__circle",children:t&&e.jsx("span",{className:"radio__dot"})}),s&&e.jsx("span",{className:"radio__label",children:s})]})}r.__docgenInfo={description:`Radio component for form inputs
+@param {boolean} checked - Whether the radio button is checked
+@param {function} onChange - Callback function when radio button state changes
+@param {string} name - Name attribute for grouping radio buttons (required for proper functionality)
+@param {string} id - Unique identifier for the radio input
+@param {string} value - Value of the radio button
+@param {string} label - Label text for the radio button
+@param {boolean} disabled - Whether the radio button is disabled
+@param {string} className - Additional CSS classes
+@param {object} props - Additional props to pass to the radio input`,methods:[],displayName:"Radio",props:{checked:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},onChange:{required:!1,tsType:{name:"signature",type:"function",raw:"(...args: unknown[]) => void",signature:{arguments:[{type:{name:"Array",elements:[{name:"unknown"}],raw:"unknown[]"},name:"args",rest:!0}],return:{name:"void"}}},description:""},name:{required:!1,tsType:{name:"unknown"},description:""},id:{required:!1,tsType:{name:"unknown"},description:""},value:{required:!1,tsType:{name:"unknown"},description:""},label:{required:!1,tsType:{name:"unknown"},description:""},disabled:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}}},composes:["InputHTMLAttributes"]};const x={title:"UI/Radio",component:r},a={render:()=>e.jsx(r,{})};var d,l,u;a.parameters={...a.parameters,docs:{...(d=a.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  render: () => <Radio />
+}`,...(u=(l=a.parameters)==null?void 0:l.docs)==null?void 0:u.source}}};const k=["Default"];export{a as Default,k as __namedExportsOrder,x as default};

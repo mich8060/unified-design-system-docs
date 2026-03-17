@@ -1,0 +1,167 @@
+import type { ReactNode } from "react";
+import { Button } from "@chg-ds/unified-design-system";
+import { Code } from "@chg-ds/unified-design-system";
+import { Divider } from "@chg-ds/unified-design-system";
+import { Flex } from "@chg-ds/unified-design-system";
+import { Tag } from "@chg-ds/unified-design-system";
+import { Text } from "@chg-ds/unified-design-system";
+import { DocPageLayout } from "../docs/DocPageLayout";
+
+const BASIC_SNIPPET = `<SectionHeaderBlock
+  eyebrow="Overview"
+  title="Candidates"
+  description="Review active candidates, monitor progress, and manage handoff steps for this pipeline."
+/>`;
+
+const ACTIONS_SNIPPET = `<SectionHeaderBlock
+  eyebrow="Section Header Pattern"
+  title="Open Requisitions"
+  description="Track open roles and quickly create or export requisition details."
+  actions={
+    <>
+      <Button label="Export" appearance="outline" />
+      <Button label="New Requisition" />
+    </>
+  }
+/>`;
+
+const META_SNIPPET = `<SectionHeaderBlock
+  eyebrow="Pipeline"
+  title="Cardiology - Denver"
+  description="Current status and assignment metadata for this workflow."
+  meta={
+    <>
+      <Tag label="8 Active" color="green" />
+      <Tag label="2 Needs Review" color="orange" />
+      <Text as="span" variant="body-14" leading="regular">
+        Updated 5 minutes ago
+      </Text>
+    </>
+  }
+  actions={
+    <>
+      <Button label="View Report" appearance="outline" />
+      <Button label="Assign Candidate" />
+    </>
+  }
+/>;
+`;
+
+function SectionHeaderBlock({
+  eyebrow,
+  title,
+  description,
+  meta,
+  actions,
+}: {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  meta?: ReactNode;
+  actions?: ReactNode;
+}) {
+  return (
+    <Flex
+      direction="column"
+      gap="12"
+      style={{
+        border: "var(--uds-border-width-1) solid var(--uds-border-primary)",
+        borderRadius: "var(--uds-radius-8)",
+        padding: "var(--uds-spacing-20)",
+        backgroundColor: "var(--uds-surface-primary)",
+      }}
+    >
+      <Flex justifyContent="space-between" alignItems="flex-start" gap="16" wrap>
+        <Flex direction="column" gap="8" style={{ maxWidth: "760px" }}>
+          {eyebrow ? (
+            <Text as="span" variant="body-12" weight="semibold" leading="regular">
+              {eyebrow}
+            </Text>
+          ) : null}
+          <Text as="h2" variant="heading-24" weight="medium" leading="regular">
+            {title}
+          </Text>
+          {description ? (
+            <Text as="p" variant="body-16" leading="regular">
+              {description}
+            </Text>
+          ) : null}
+          {meta ? <Flex alignItems="center" gap="8" wrap>{meta}</Flex> : null}
+        </Flex>
+        {actions ? <Flex alignItems="center" gap="8" wrap>{actions}</Flex> : null}
+      </Flex>
+    </Flex>
+  );
+}
+
+export function SectionHeaderPatternPage() {
+  return (
+    <DocPageLayout
+      title="Section Header"
+      description="Section Header is a reusable pattern for page and section intros using existing UDS primitives."
+    >
+      <Flex direction="column" gap="32">
+        <Flex direction="column" gap="10">
+          <Text as="h3" variant="heading-20" weight="medium" leading="regular">
+            Basic
+          </Text>
+          <SectionHeaderBlock
+            eyebrow="Overview"
+            title="Candidates"
+            description="Review active candidates, monitor progress, and manage handoff steps for this pipeline."
+          />
+          <Code language="tsx" code={BASIC_SNIPPET} />
+        </Flex>
+
+        <Divider variant="solid" />
+
+        <Flex direction="column" gap="10">
+          <Text as="h3" variant="heading-20" weight="medium" leading="regular">
+            With Actions
+          </Text>
+          <SectionHeaderBlock
+            eyebrow="Section Header Pattern"
+            title="Open Requisitions"
+            description="Track open roles and quickly create or export requisition details."
+            actions={
+              <>
+                <Button label="Export" appearance="outline" />
+                <Button label="New Requisition" />
+              </>
+            }
+          />
+          <Code language="tsx" code={ACTIONS_SNIPPET} />
+        </Flex>
+
+        <Divider variant="solid" />
+
+        <Flex direction="column" gap="10">
+          <Text as="h3" variant="heading-20" weight="medium" leading="regular">
+            With Metadata
+          </Text>
+          <SectionHeaderBlock
+            eyebrow="Pipeline"
+            title="Cardiology - Denver"
+            description="Current status and assignment metadata for this workflow."
+            meta={
+              <>
+                <Tag label="8 Active" color="green" />
+                <Tag label="2 Needs Review" color="orange" />
+                <Text as="span" variant="body-14" leading="regular">
+                  Updated 5 minutes ago
+                </Text>
+              </>
+            }
+            actions={
+              <>
+                <Button label="View Report" appearance="outline" />
+                <Button label="Assign Candidate" />
+              </>
+            }
+          />
+          <Code language="tsx" code={META_SNIPPET} />
+        </Flex>
+      </Flex>
+    </DocPageLayout>
+  );
+}
