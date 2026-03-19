@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import "@chg-ds/unified-design-system/styles.css";
 import "@chg-ds/unified-design-system/tokens.css";
+import "./styles/index.scss";
 
 import { AppShell } from "./app-shell/AppShell";
 import { COMPONENT_DEMO_NAV_ITEMS } from "./demos/component-demo.registry";
