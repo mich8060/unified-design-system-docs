@@ -1,9 +1,5 @@
 import React from "react";
-import { Code } from "@chg-ds/unified-design-system";
-import { Divider } from "@chg-ds/unified-design-system";
-import { FileUpload } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Code, Divider, FileUpload, Layout, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 
@@ -114,7 +110,7 @@ interface UploadExampleProps {
 
 function UploadExample({ title, description, snippet, children }: UploadExampleProps) {
   return (
-    <Flex direction="column" gap="12">
+    <Layout direction="column" gap="12">
       <Text as="h2" variant="heading-24" weight="medium" leading="regular">
         {title}
       </Text>
@@ -123,7 +119,7 @@ function UploadExample({ title, description, snippet, children }: UploadExampleP
       </Text>
       {children}
       <Code code={snippet} language="tsx" />
-    </Flex>
+    </Layout>
   );
 }
 
@@ -139,7 +135,7 @@ export function FileUploadDemoPage() {
       title="File Upload"
       description="FileUpload supports drag-and-drop and picker-based selection with consistent validation, sizing, and state handling."
     >
-      <Flex direction="column" gap="48">
+      <Layout direction="column" gap="48">
         <UploadExample
           title="Basic Upload"
           description="Single-file upload with default instruction and validation messaging."
@@ -230,7 +226,7 @@ export function FileUploadDemoPage() {
         >
           <FileUpload disabled instructionText="File upload is currently disabled" />
         </UploadExample>
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={FILE_UPLOAD_PROPS} title="Props Reference" />

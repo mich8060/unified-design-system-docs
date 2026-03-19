@@ -1,7 +1,6 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
-import { Container } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Container, Text } from "@chg-ds/unified-design-system";
 import {
   getComponentDemoBySlug,
   type ComponentDemoDefinition,

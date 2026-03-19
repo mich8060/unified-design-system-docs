@@ -1,6 +1,4 @@
-import { Flex } from "@chg-ds/unified-design-system";
-import { Table } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Layout, Table, Text } from "@chg-ds/unified-design-system";
 
 export interface ComponentPropRow {
   prop: string;
@@ -26,11 +24,11 @@ export function ComponentPropsTable({
   title = "Props",
 }: ComponentPropsTableProps) {
   return (
-    <Flex direction="column" gap="12">
+    <Layout direction="column" gap="12">
       <Text as="h2" variant="heading-24" weight="medium" leading="regular">
         {title}
       </Text>
       <Table columns={COLUMNS} data={rows} />
-    </Flex>
+    </Layout>
   );
 }

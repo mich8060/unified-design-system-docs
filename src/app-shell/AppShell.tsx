@@ -1,11 +1,7 @@
 import React, { useCallback, useEffect, useId, useMemo, useState } from "react";
 import type { ShellLayoutConfig } from "./layout.types";
 import { defaultLayout } from "./layout.types";
-import Avatar from "@chg-ds/unified-design-system/Avatar";
-import ActionMenu from "@chg-ds/unified-design-system/ActionMenu";
-import Button from "@chg-ds/unified-design-system/Button";
-import Branding from "@chg-ds/unified-design-system/Branding";
-import { Toolbar } from "@chg-ds/unified-design-system";
+import { ActionMenu, Avatar, Branding, Button, Toolbar } from "@chg-ds/unified-design-system";
 import "./shell.scss";
 
 export interface AppShellSlots {
@@ -57,6 +53,10 @@ export interface AppShellSectionProps {
     width?: number | string;
     /** Optional maximum width for rail regions like AppShell.SidePanel (e.g. 480 or "32rem"). */
     maxWidth?: number | string;
+    /** Optional surface token for AppShell.Main. */
+    surface?: "primary" | "secondary";
+    /** Optional visual variant for AppShell.SidePanel. */
+    variant?: "default" | "document-details";
 }
 
 export interface AppShellSidePanelSectionProps extends React.HTMLAttributes<HTMLElement> {
@@ -157,6 +157,8 @@ function AppShellComponent({
     let customFooter: React.ReactNode = null;
     let sidePanelWidth: number | string | undefined;
     let sidePanelMaxWidth: number | string | undefined;
+    let mainSurface: "primary" | "secondary" = "secondary";
+    let sidePanelVariant: "default" | "document-details" = "default";
 
     const topLevelChildren = React.Children.toArray(children) as React.ReactElement<AppShellSectionProps>[];
     for (const child of topLevelChildren) {
@@ -183,12 +185,14 @@ function AppShellComponent({
         }
         if (child.type === AppShellMainSlot || slotName === "Main") {
             customMain = child.props.children;
+            mainSurface = child.props.surface ?? "secondary";
             continue;
         }
         if (child.type === AppShellSidePanelSlot || slotName === "SidePanel") {
             customSidePanel = child.props.children;
             sidePanelWidth = child.props.width;
             sidePanelMaxWidth = child.props.maxWidth;
+            sidePanelVariant = child.props.variant ?? "default";
         }
     }
     const resolvedSidePanelWidth = typeof sidePanelWidth === "number" ? `${sidePanelWidth}px` : sidePanelWidth;
@@ -277,11 +281,11 @@ function AppShellComponent({
                         {hasListview ? (
                             <aside className="app-shell__listview">{customListview}</aside>
                         ) : null}
-                        <section className="app-shell__main-content">
+                        <section className={`app-shell__main-content app-shell__main-content--surface-${mainSurface}`}>
                             {customMain}
                         </section>
                         {hasSidePanel ? (
-                            <aside className="app-shell__side-panel" style={sidePanelStyle}>{customSidePanel}</aside>
+                            <aside className={`app-shell__side-panel app-shell__side-panel--${sidePanelVariant}`} style={sidePanelStyle}>{customSidePanel}</aside>
                         ) : null}
                     </main>
                     {config.footer && hasRenderableContent(resolvedFooter) ? resolvedFooter : null}

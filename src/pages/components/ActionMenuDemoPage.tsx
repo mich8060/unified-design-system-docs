@@ -1,10 +1,5 @@
 import { useState } from "react";
-import { ActionMenu } from "@chg-ds/unified-design-system";
-import { Button } from "@chg-ds/unified-design-system";
-import { Divider } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
-import { TextInput } from "@chg-ds/unified-design-system";
+import { ActionMenu, Button, Divider, Layout, Text, TextInput } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 
@@ -130,8 +125,8 @@ export function ActionMenuDemoPage() {
       title="ActionMenu"
       description="ActionMenu groups contextual commands into a compact, keyboard-accessible dropdown."
     >
-      <Flex direction="column" gap="48">
-        <Flex direction="column" gap="12">
+      <Layout direction="column" gap="48">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Basic Usage
           </Text>
@@ -139,10 +134,10 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" layout="icon-only" icon="DotsThree" aria-label="More actions" />}
             items={BASIC_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             With Dividers
           </Text>
@@ -150,10 +145,10 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" label="Actions" layout="icon-right" icon="CaretDown" />}
             items={DIVIDER_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             With Disabled Items
           </Text>
@@ -161,10 +156,10 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" label="Actions" layout="icon-right" icon="CaretDown" />}
             items={DISABLED_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Destructive Actions
           </Text>
@@ -172,10 +167,10 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" label="Actions" layout="icon-right" icon="CaretDown" />}
             items={DESTRUCTIVE_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             With Keyboard Shortcuts
           </Text>
@@ -183,10 +178,10 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" label="Actions" layout="icon-right" icon="CaretDown" />}
             items={SHORTCUT_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Autosuggest Variant
           </Text>
@@ -202,10 +197,10 @@ export function ActionMenuDemoPage() {
             }
             items={AUTOSUGGEST_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Search Variant
           </Text>
@@ -215,10 +210,10 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" label="Filter Specialties" layout="icon-right" icon="CaretDown" />}
             items={SEARCH_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Multilevel Menus
           </Text>
@@ -226,14 +221,14 @@ export function ActionMenuDemoPage() {
             trigger={<Button appearance="outline" label="Actions" layout="icon-right" icon="CaretDown" />}
             items={MULTILEVEL_ITEMS as unknown[]}
           />
-        </Flex>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Trigger Variations
           </Text>
-          <Flex alignItems="center" gap="16" wrap>
+          <Layout alignItems="center" gap="16" wrap>
             <ActionMenu
               trigger={<Button appearance="outline" layout="icon-only" icon="DotsThree" aria-label="More actions" />}
               items={BASIC_ITEMS as unknown[]}
@@ -246,17 +241,17 @@ export function ActionMenuDemoPage() {
               trigger={<Button appearance="primary" label="Options" />}
               items={BASIC_ITEMS as unknown[]}
             />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="16">
+        <Layout direction="column" gap="16">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Placement Options
           </Text>
-          <Flex alignItems="center" gap="24" wrap>
+          <Layout alignItems="center" gap="24" wrap>
             {PLACEMENTS.map((placement) => (
-              <Flex
+              <Layout
                 key={placement.placement}
                 direction="column"
                 gap="8"
@@ -270,11 +265,11 @@ export function ActionMenuDemoPage() {
                   trigger={<Button appearance="outline" label={placement.label} />}
                   items={BASIC_ITEMS as unknown[]}
                 />
-              </Flex>
+              </Layout>
             ))}
-          </Flex>
-        </Flex>
-      </Flex>
+          </Layout>
+        </Layout>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={ACTION_MENU_PROPS} />

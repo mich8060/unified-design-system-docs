@@ -1,7 +1,4 @@
-import { Avatar } from "@chg-ds/unified-design-system";
-import { Divider } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Avatar, Divider, Layout, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 
@@ -38,58 +35,58 @@ export function AvatarDemoPage() {
       title="Avatar"
       description="Avatars display user images or initials with optional status and camera-action variants."
     >
-      <Flex direction="column" gap="48">
-        <Flex direction="column" gap="12">
+      <Layout direction="column" gap="48">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Variants
           </Text>
-          <Flex alignItems="center" gap="16" wrap>
+          <Layout alignItems="center" gap="16" wrap>
             <Avatar src={DEMO_IMAGE} alt="User profile photo" />
             <Avatar initials="JD" />
             <Avatar name="Jane Smith" />
             <Avatar initials="ON" status />
             <Avatar src={DEMO_IMAGE} showCameraButton />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Size Variants
           </Text>
-          <Flex alignItems="center" gap="16" wrap>
+          <Layout alignItems="center" gap="16" wrap>
             <Avatar initials="SM" size="small" />
             <Avatar initials="MD" size="default" />
             <Avatar initials="LG" size="large" />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             Camera Button Variant
           </Text>
-          <Flex alignItems="center" gap="16" wrap>
+          <Layout alignItems="center" gap="16" wrap>
             <Avatar initials="SM" size="small" showCameraButton />
             <Avatar initials="MD" size="default" showCameraButton />
             <Avatar initials="LG" size="large" showCameraButton />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="12">
+        <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
             State Combinations
           </Text>
-          <Flex alignItems="center" gap="16" wrap>
+          <Layout alignItems="center" gap="16" wrap>
             <Avatar initials="ST" status />
             <Avatar src={DEMO_IMAGE} status />
             <Avatar initials="CM" showCameraButton />
             <Avatar src={DEMO_IMAGE} status showCameraButton cameraButtonAriaLabel="Edit image" />
             <Avatar initials="" name="" />
-          </Flex>
-        </Flex>
-      </Flex>
+          </Layout>
+        </Layout>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={AVATAR_PROPS} />

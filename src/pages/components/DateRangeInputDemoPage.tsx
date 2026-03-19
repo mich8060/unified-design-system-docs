@@ -1,9 +1,5 @@
 import { useState } from "react";
-import { Code } from "@chg-ds/unified-design-system";
-import { DateRangeInput } from "@chg-ds/unified-design-system";
-import { Divider } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Code, DateRangeInput, Divider, Layout, Text } from "@chg-ds/unified-design-system";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
 
@@ -52,7 +48,7 @@ export function DateRangeInputDemoPage() {
       title="DateRangeInput"
       description="DateRangeInput composes two date fields for start and end date selection."
     >
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Basic Usage
         </Text>
@@ -63,22 +59,22 @@ export function DateRangeInputDemoPage() {
           onEndChange={(event) => setEndValue(event.target.value)}
         />
         <Code language="tsx" code={BASIC_SNIPPET} />
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Size Variants
         </Text>
         <DateRangeInput startValue="2026-03-01" endValue="2026-03-07" size="default" />
         <DateRangeInput startValue="2026-03-01" endValue="2026-03-07" size="compact" />
         <Code language="tsx" code={SIZE_SNIPPET} />
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           State Variants
         </Text>
@@ -87,7 +83,7 @@ export function DateRangeInputDemoPage() {
         <DateRangeInput startValue="2026-03-01" endValue="2026-03-07" state="error" />
         <DateRangeInput startValue="2026-03-01" endValue="2026-03-07" disabled />
         <Code language="tsx" code={STATE_SNIPPET} />
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={DATE_RANGE_INPUT_PROPS} />

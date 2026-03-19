@@ -1,8 +1,4 @@
-import { Divider } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { ProgressIndicator } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
-import { Code } from "@chg-ds/unified-design-system";
+import { Divider, Layout, Text, ProgressIndicator } from "@chg-ds/unified-design-system";
 import { useState } from "react";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
@@ -53,17 +49,17 @@ function DemoBlock({
   children: React.ReactNode;
 }) {
   return (
-    <Flex direction="column" gap="10">
+    <Layout direction="column" gap="10">
       <Text as="h3" variant="heading-20" weight="medium" leading="regular">
         {title}
       </Text>
       <Text as="p" variant="body-14" leading="regular">
         {description}
       </Text>
-      <Flex direction="column" gap="16" style={{ maxWidth: "640px" }}>
+      <Layout direction="column" gap="16" style={{ maxWidth: "640px" }}>
         {children}
-      </Flex>
-    </Flex>
+      </Layout>
+    </Layout>
   );
 }
 
@@ -75,7 +71,7 @@ export function ProgressIndicatorDemoPage() {
       title="ProgressIndicator"
       description="ProgressIndicator shows linear completion and loading states with configurable size, color, and value-label positions."
     >
-      <Flex direction="column" gap="40">
+      <Layout direction="column" gap="40">
         <DemoBlock
           title="Default"
           description="Standard progress indicator with optional right-aligned percentage."
@@ -124,7 +120,7 @@ export function ProgressIndicatorDemoPage() {
           <ProgressIndicator value={58} label="Bottom Floating Value" labelPosition="bottom-floating" />
           <Code language="tsx" code={LABEL_POSITION_SNIPPET} />
         </DemoBlock>
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={PROGRESS_INDICATOR_PROPS} title="ProgressIndicator Props" />

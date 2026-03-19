@@ -1,8 +1,5 @@
 import { useMemo } from "react";
-import { Checkbox } from "@chg-ds/unified-design-system";
-import { Divider } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Checkbox, Divider, Layout, Text } from "@chg-ds/unified-design-system";
 import { useState } from "react";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
@@ -68,8 +65,8 @@ export function CheckboxDemoPage() {
       title="Checkbox"
       description="Checkbox lets users select one or more options. Use indeterminate state for partial group selection."
     >
-      <Flex direction="column" gap="24">
-        <Flex direction="column" gap="8">
+      <Layout direction="column" gap="24">
+        <Layout direction="column" gap="8">
           <Text as="h2" variant="heading-24" weight="bold" leading="regular">
             Basic Usage
           </Text>
@@ -77,7 +74,7 @@ export function CheckboxDemoPage() {
             A simple checkbox for selecting an option. Use checkboxes when users need to make
             multiple selections from a set of options.
           </Text>
-          <Flex direction="column" gap="12">
+          <Layout direction="column" gap="12">
             <Checkbox label="Unchecked checkbox" checked={false} onChange={() => {}} />
             <Checkbox
               label="Checked checkbox"
@@ -86,12 +83,12 @@ export function CheckboxDemoPage() {
             />
             <Checkbox label="Disabled unchecked" checked={false} disabled onChange={() => {}} />
             <Checkbox label="Disabled checked" checked disabled onChange={() => {}} />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
 
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="8">
+        <Layout direction="column" gap="8">
           <Text as="h2" variant="heading-24" weight="bold" leading="regular">
             Indeterminate State
           </Text>
@@ -99,14 +96,14 @@ export function CheckboxDemoPage() {
             The indeterminate state is used when some but not all items in a group are selected.
             This is commonly used with &quot;Select All&quot; functionality.
           </Text>
-          <Flex direction="column" gap="12">
+          <Layout direction="column" gap="12">
             <Checkbox
               label="Select All"
               checked={allSelected}
               indeterminate={someSelected && !allSelected}
               onChange={(checked: boolean) => handleSelectAll(checked)}
             />
-            <Flex direction="column" gap="12" style={{ paddingLeft: "24px" }}>
+            <Layout direction="column" gap="12" style={{ paddingLeft: "24px" }}>
               <Checkbox
                 label="Item 1"
                 checked={items[0]}
@@ -122,20 +119,20 @@ export function CheckboxDemoPage() {
                 checked={items[2]}
                 onChange={(checked: boolean) => handleItemToggle(2, checked)}
               />
-            </Flex>
-          </Flex>
-        </Flex>
+            </Layout>
+          </Layout>
+        </Layout>
 
         <Divider variant="solid" />
 
-        <Flex direction="column" gap="8">
+        <Layout direction="column" gap="8">
           <Text as="h2" variant="heading-24" weight="bold" leading="regular">
             Different States
           </Text>
           <Text as="p" variant="body-16" leading="regular">
             Checkboxes support unchecked, checked, disabled, and indeterminate states.
           </Text>
-          <Flex direction="column" gap="12">
+          <Layout direction="column" gap="12">
             <Checkbox label="Default checkbox" checked={false} onChange={() => {}} />
             <Checkbox
               label="Checked checkbox"
@@ -150,12 +147,12 @@ export function CheckboxDemoPage() {
             />
             <Checkbox label="Disabled unchecked" checked={false} disabled onChange={() => {}} />
             <Checkbox label="Disabled checked" checked disabled onChange={() => {}} />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
 
         <Divider variant="solid" />
         <ComponentPropsTable rows={CHECKBOX_PROPS} />
-      </Flex>
+      </Layout>
     </DocPageLayout>
   );
 }

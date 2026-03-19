@@ -1,10 +1,4 @@
-import { Divider } from "@chg-ds/unified-design-system";
-import { Dropdown } from "@chg-ds/unified-design-system";
-import { Field } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { TextInput } from "@chg-ds/unified-design-system";
-import { Textarea } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Divider, Dropdown, Field, Layout, TextInput, Textarea, Text } from "@chg-ds/unified-design-system";
 import { useState } from "react";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
@@ -42,7 +36,7 @@ export function FieldDemoPage() {
       title="Field"
       description="Field wraps form controls with consistent label, helper messaging, required indication, and metadata."
     >
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Basic Usage
         </Text>
@@ -60,10 +54,10 @@ export function FieldDemoPage() {
             type="email"
           />
         </Field>
-      </Flex>
+      </Layout>
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Required and Info
         </Text>
@@ -81,10 +75,10 @@ export function FieldDemoPage() {
             placeholder="Select role"
           />
         </Field>
-      </Flex>
+      </Layout>
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Error and Disabled States
         </Text>
@@ -99,10 +93,10 @@ export function FieldDemoPage() {
         <Field label="Department (Disabled)" helperMessage="This field is managed by IT.">
           <TextInput value="Clinical Operations" disabled readOnly />
         </Field>
-      </Flex>
+      </Layout>
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="16">
+      <Layout direction="column" gap="16">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Textarea Composition
         </Text>
@@ -124,7 +118,7 @@ export function FieldDemoPage() {
             placeholder="Add details..."
           />
         </Field>
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={FIELD_PROPS} />

@@ -1,12 +1,6 @@
 import { useEffect } from "react";
 import { useMemo } from "react";
-import { Button } from "@chg-ds/unified-design-system";
-import { Divider } from "@chg-ds/unified-design-system";
-import { Dropdown } from "@chg-ds/unified-design-system";
-import { Flex } from "@chg-ds/unified-design-system";
-import { Icon } from "@chg-ds/unified-design-system";
-import { TextInput } from "@chg-ds/unified-design-system";
-import { Text } from "@chg-ds/unified-design-system";
+import { Button, Divider, Dropdown, Icon, Layout, TextInput, Text } from "@chg-ds/unified-design-system";
 import { useState } from "react";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
@@ -93,46 +87,46 @@ export function IconDemoPage() {
       title="Icon"
       description="Icon wraps Phosphor iconography and supports consistent sizing and appearance options."
     >
-      <Flex direction="column" gap="12">
+      <Layout direction="column" gap="12">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Appearances
         </Text>
-        <Flex alignItems="center" gap="16" wrap>
+        <Layout alignItems="center" gap="16" wrap>
           {iconAppearances.map((appearance) => (
-            <Flex key={appearance} direction="column" alignItems="center" gap="4">
+            <Layout key={appearance} direction="column" alignItems="center" gap="4">
               <Icon name="WarningCircle" appearance={appearance} />
               <Text as="span" variant="body-12" leading="regular">
                 {appearance}
               </Text>
-            </Flex>
+            </Layout>
           ))}
-        </Flex>
-      </Flex>
+        </Layout>
+      </Layout>
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="12">
+      <Layout direction="column" gap="12">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Sizes
         </Text>
-        <Flex alignItems="flex-end" gap="16" wrap>
+        <Layout alignItems="flex-end" gap="16" wrap>
           {iconSizes.map((size) => (
-            <Flex key={size} direction="column" alignItems="center" gap="4">
+            <Layout key={size} direction="column" alignItems="center" gap="4">
               <Icon name="House" size={size} />
               <Text as="span" variant="body-12" leading="regular">
                 {size}px
               </Text>
-            </Flex>
+            </Layout>
           ))}
-        </Flex>
-      </Flex>
+        </Layout>
+      </Layout>
       <Divider variant="solid" />
 
-      <Flex direction="column" gap="12">
+      <Layout direction="column" gap="12">
         <Text as="h2" variant="heading-24" weight="medium" leading="regular">
           Icon Explorer
         </Text>
-        <Flex alignItems="flex-end" gap="12" wrap>
-          <Flex direction="column" gap="4" style={{ minWidth: "280px", flex: "1 1 320px" }}>
+        <Layout alignItems="flex-end" gap="12" wrap>
+          <Layout direction="column" gap="4" style={{ minWidth: "280px", flex: "1 1 320px" }}>
             <TextInput
               label="Search icons"
               placeholder="Try: House, Calendar, MagnifyingGlass"
@@ -140,8 +134,8 @@ export function IconDemoPage() {
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
             />
-          </Flex>
-          <Flex direction="column" gap="4" style={{ minWidth: "220px" }}>
+          </Layout>
+          <Layout direction="column" gap="4" style={{ minWidth: "220px" }}>
             <Dropdown
               placeholder="Weight"
               value={selectedAppearance}
@@ -152,16 +146,16 @@ export function IconDemoPage() {
                 }
               }}
             />
-          </Flex>
-        </Flex>
+          </Layout>
+        </Layout>
         <Text as="p" variant="body-14" leading="regular">
           {isLoadingIcons
             ? "Loading icons..."
             : `Showing ${visibleIconNames.length} of ${filteredIconNames.length} filtered icons (${allIconNames.length} total).`}
         </Text>
-        <Flex gap="12" wrap>
+        <Layout gap="12" wrap>
           {visibleIconNames.map((name) => (
-            <Flex
+            <Layout
               key={name}
               direction="column"
               alignItems="center"
@@ -177,17 +171,17 @@ export function IconDemoPage() {
               <Text as="span" variant="body-12" leading="regular" style={{ textAlign: "center" }}>
                 {name}
               </Text>
-            </Flex>
+            </Layout>
           ))}
-        </Flex>
+        </Layout>
         {!isLoadingIcons && filteredIconNames.length > visibleCount ? (
-          <Flex>
-            <Button onClick={() => setVisibleCount((current) => current + 300)} appearance="secondary">
+          <Layout>
+            <Button onClick={() => setVisibleCount((current) => current + 300)} appearance="outline">
               Load more icons
             </Button>
-          </Flex>
+          </Layout>
         ) : null}
-      </Flex>
+      </Layout>
 
       <Divider variant="solid" />
       <ComponentPropsTable rows={ICON_PROPS} />
