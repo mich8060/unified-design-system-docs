@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
 const udsDistPath = path.join(
@@ -9,28 +9,57 @@ const udsDistPath = path.join(
   "dist",
 );
 
-const descriptionListModulePath = path.join(
-  udsDistPath,
-  "components",
-  "DescriptionList",
-  "DescriptionList.js",
-);
-
-const fallbackDescriptionListModule = `function DescriptionList() {
-  return null;
-}
-
-export default DescriptionList;
-`;
-
 if (!existsSync(udsDistPath)) {
   process.exit(0);
 }
 
-if (!existsSync(descriptionListModulePath)) {
-  mkdirSync(path.dirname(descriptionListModulePath), { recursive: true });
-  writeFileSync(descriptionListModulePath, fallbackDescriptionListModule, "utf8");
-  console.warn(
-    "[uds-integrity] Added fallback module for dist/components/DescriptionList/DescriptionList.js",
-  );
+const udsIndexPath = path.join(udsDistPath, "index.js");
+if (!existsSync(udsIndexPath)) {
+  process.exit(0);
+}
+
+const indexSource = readFileSync(udsIndexPath, "utf8");
+const relativeImportRegex = /from\s*"(\.\/[^"]+\.js)"/g;
+const referencedJsModules = new Set();
+
+for (const match of indexSource.matchAll(relativeImportRegex)) {
+  referencedJsModules.add(match[1]);
+}
+
+let patchedCount = 0;
+
+for (const modulePath of referencedJsModules) {
+  const absoluteJsPath = path.join(udsDistPath, modulePath.slice(2));
+  if (existsSync(absoluteJsPath)) {
+    continue;
+  }
+
+  const absoluteCjsPath = absoluteJsPath.replace(/\.js$/, ".cjs");
+  const exportName = path.basename(absoluteJsPath, ".js");
+  const cjsRelativePath = `./${path.basename(absoluteCjsPath)}`;
+
+  const proxyModuleSource = existsSync(absoluteCjsPath)
+    ? `import * as __udsCjsModule from "${cjsRelativePath}";
+const __udsResolved = __udsCjsModule.default ?? __udsCjsModule;
+
+export const ${exportName} = __udsCjsModule.${exportName} ?? __udsResolved;
+export default __udsResolved;
+export * from "${cjsRelativePath}";
+`
+    : `function ${exportName}() {
+  return null;
+}
+
+export { ${exportName} };
+export default ${exportName};
+`;
+
+  mkdirSync(path.dirname(absoluteJsPath), { recursive: true });
+  writeFileSync(absoluteJsPath, proxyModuleSource, "utf8");
+  patchedCount += 1;
+  console.warn(`[uds-integrity] Added fallback module for ${modulePath}`);
+}
+
+if (patchedCount === 0) {
+  console.log("[uds-integrity] Package module integrity verified.");
 }
