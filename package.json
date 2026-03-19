@@ -462,6 +462,7 @@
   "scripts": {
     "clean": "node -e \"const { rmSync } = require('node:fs'); ['dist', 'node_modules/.vite', '.vite'].forEach((p) => rmSync(p, { recursive: true, force: true }));\"",
     "postinstall": "node scripts/ensure-uds-package-integrity.mjs",
+    "prebuild": "node scripts/ensure-uds-package-integrity.mjs",
     "dev": "vite --configLoader native",
     "dev:preact": "UDS_USE_PREACT_COMPAT=1 vite --configLoader native",
     "build": "vite build --configLoader native",
