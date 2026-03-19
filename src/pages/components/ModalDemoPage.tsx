@@ -1,4 +1,4 @@
-import { Badge, Button, Code, Divider, Layout, Text, Modal } from "@chg-ds/unified-design-system";
+import { Button, Code, Divider, Layout, Text, Modal } from "@chg-ds/unified-design-system";
 import { useState } from "react";
 import { DocPageLayout } from "../docs/DocPageLayout";
 import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPropsTable";
@@ -6,18 +6,12 @@ import { ComponentPropsTable, type ComponentPropRow } from "../docs/ComponentPro
 const MODAL_PROPS: ComponentPropRow[] = [
   { prop: "open", type: "boolean", defaultValue: "false", description: "Controls whether the modal is visible." },
   { prop: "onClose", type: "() => void", defaultValue: "-", description: "Called when user requests close (backdrop, Escape, close button)." },
-  { prop: "title", type: "string", defaultValue: "-", description: "Header title text." },
-  { prop: "subtitle", type: "string", defaultValue: "-", description: "Optional supporting text in the header." },
-  { prop: "badge", type: "ReactNode", defaultValue: "-", description: "Optional badge element shown next to title." },
   { prop: "footer", type: "ReactNode", defaultValue: "-", description: "Footer content, typically action buttons." },
   { prop: "size", type: '"small" | "default" | "large" | "fullscreen"', defaultValue: '"default"', description: "Sets modal width/size behavior." },
   { prop: "closeOnBackdrop", type: "boolean", defaultValue: "true", description: "Closes when clicking outside the panel." },
   { prop: "closeOnEscape", type: "boolean", defaultValue: "true", description: "Closes when pressing Escape." },
   { prop: "dismissible", type: "boolean", defaultValue: "false", description: "Adds a built-in close action button in the header area." },
   { prop: "headerActions", type: "ReactNode", defaultValue: "-", description: "Additional actions rendered in the header area." },
-  { prop: "headerAlign", type: '"start" | "center" | "space-between"', defaultValue: '"start"', description: "Header layout alignment preset." },
-  { prop: "footerAlign", type: '"start" | "center" | "end" | "space-between"', defaultValue: '"space-between"', description: "Footer layout alignment preset." },
-  { prop: "bodyPadding", type: '"none" | "compact" | "default"', defaultValue: '"none"', description: "Optional body padding preset; children can still fully control spacing." },
   { prop: "children", type: "ReactNode", defaultValue: "-", description: "Body content inside the modal." },
 ];
 
@@ -34,9 +28,7 @@ type ModalKey =
 const BASIC_MODAL_SNIPPET = `<Modal
   open={activeModal === "basic"}
   onClose={closeModal}
-  title="Basic Modal"
-  subtitle="Launched from a UDS button trigger."
-  badge={<Badge count={1} />}
+  header={<Text as="h3" variant="heading-24">Basic Modal</Text>}
   footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
 >
   <Layout direction="column" gap="0">
@@ -49,42 +41,42 @@ const BASIC_MODAL_SNIPPET = `<Modal
   </Layout>
 </Modal>`;
 
-const SMALL_MODAL_SNIPPET = `<Modal size="small" open={activeModal === "small"} onClose={closeModal} title="Small Modal" subtitle="Compact width for simple confirmations." footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
+const SMALL_MODAL_SNIPPET = `<Modal size="small" open={activeModal === "small"} onClose={closeModal} header={<Text as="h3" variant="heading-24">Small Modal</Text>} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
   <Layout direction="column" gap="0">
     <Text as="p" variant="body-14" leading="regular">Small is ideal for brief prompts and short one-step actions.</Text>
     <Text as="p" variant="body-14" leading="regular">Reserve it for compact flows with minimal content.</Text>
   </Layout>
 </Modal>`;
 
-const DEFAULT_MODAL_SNIPPET = `<Modal size="default" open={activeModal === "default"} onClose={closeModal} title="Default Modal" subtitle="Balanced width for common tasks." footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
+const DEFAULT_MODAL_SNIPPET = `<Modal size="default" open={activeModal === "default"} onClose={closeModal} header={<Text as="h3" variant="heading-24">Default Modal</Text>} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
   <Layout direction="column" gap="0">
     <Text as="p" variant="body-14" leading="regular">Default is the standard size for most content and workflows.</Text>
     <Text as="p" variant="body-14" leading="regular">Use this when users need a balanced amount of context and action.</Text>
   </Layout>
 </Modal>`;
 
-const LARGE_MODAL_SNIPPET = `<Modal size="large" open={activeModal === "large"} onClose={closeModal} title="Large Modal" subtitle="Extra width for denser content." footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
+const LARGE_MODAL_SNIPPET = `<Modal size="large" open={activeModal === "large"} onClose={closeModal} header={<Text as="h3" variant="heading-24">Large Modal</Text>} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
   <Layout direction="column" gap="0">
     <Text as="p" variant="body-14" leading="regular">Large provides more horizontal room for detailed forms and layouts.</Text>
     <Text as="p" variant="body-14" leading="regular">It works well for denser content and multi-column structures.</Text>
   </Layout>
 </Modal>`;
 
-const FULLSCREEN_MODAL_SNIPPET = `<Modal size="fullscreen" open={activeModal === "fullscreen"} onClose={closeModal} title="Fullscreen Modal" subtitle="Uses the full viewport for immersive tasks." footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
+const FULLSCREEN_MODAL_SNIPPET = `<Modal size="fullscreen" open={activeModal === "fullscreen"} onClose={closeModal} header={<Text as="h3" variant="heading-24">Fullscreen Modal</Text>} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
   <Layout direction="column" gap="0">
     <Text as="p" variant="body-14" leading="regular">Fullscreen works well for multi-step workflows or content-heavy experiences.</Text>
     <Text as="p" variant="body-14" leading="regular">Consider this for immersive tasks requiring maximum workspace.</Text>
   </Layout>
 </Modal>`;
 
-const NO_BACKDROP_CLOSE_SNIPPET = `<Modal open={activeModal === "no-backdrop-close"} onClose={closeModal} title="Backdrop Close Disabled" subtitle="Clicking outside this modal will not close it." closeOnBackdrop={false} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
+const NO_BACKDROP_CLOSE_SNIPPET = `<Modal open={activeModal === "no-backdrop-close"} onClose={closeModal} header={<Text as="h3" variant="heading-24">Backdrop Close Disabled</Text>} closeOnBackdrop={false} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
   <Layout direction="column" gap="0">
     <Text as="p" variant="body-14" leading="regular">Use this when accidental dismissal could interrupt critical user actions.</Text>
     <Text as="p" variant="body-14" leading="regular">The modal can still be closed with the close button or footer actions.</Text>
   </Layout>
 </Modal>`;
 
-const NO_ESCAPE_CLOSE_SNIPPET = `<Modal open={activeModal === "no-escape-close"} onClose={closeModal} title="Escape Close Disabled" subtitle="Pressing Escape will not close this modal." closeOnEscape={false} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
+const NO_ESCAPE_CLOSE_SNIPPET = `<Modal open={activeModal === "no-escape-close"} onClose={closeModal} header={<Text as="h3" variant="heading-24">Escape Close Disabled</Text>} closeOnEscape={false} footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}>
   <Layout direction="column" gap="0">
     <Text as="p" variant="body-14" leading="regular">Keep Escape disabled only for flows that must be explicitly completed or cancelled.</Text>
     <Text as="p" variant="body-14" leading="regular">Always provide clear Cancel and Confirm actions when doing this.</Text>
@@ -95,9 +87,6 @@ const LAYOUT_PRESET_SNIPPET = `<Modal
   open={activeModal === "layout-presets"}
   onClose={closeModal}
   dismissible
-  headerAlign="space-between"
-  footerAlign="end"
-  bodyPadding="compact"
   header={<Text as="h3" variant="heading-24">Request an Edit</Text>}
   headerActions={<Button size="xsmall" appearance="text" label="Help" />}
   footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
@@ -155,11 +144,11 @@ export function ModalDemoPage() {
 
         <Layout direction="column" gap="12">
           <Text as="h2" variant="heading-24" weight="medium" leading="regular">
-            Header and Footer Layout Presets
+            Custom Header and Actions
           </Text>
           <Layout alignItems="center" gap="12" wrap>
             <Button
-              label="Open Layout Preset Modal"
+              label="Open Custom Header Modal"
               appearance="outline"
               onClick={() => setActiveModal("layout-presets")}
             />
@@ -192,9 +181,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "basic"}
         onClose={closeModal}
-        title="Basic Modal"
-        subtitle="Launched from a UDS button trigger."
-        badge={<Badge count={1} />}
+        header={<Text as="h3" variant="heading-24">Basic Modal</Text>}
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
         <Layout direction="column" gap="0">
@@ -210,8 +197,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "small"}
         onClose={closeModal}
-        title="Small Modal"
-        subtitle="Compact width for simple confirmations."
+        header={<Text as="h3" variant="heading-24">Small Modal</Text>}
         size="small"
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
@@ -228,8 +214,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "default"}
         onClose={closeModal}
-        title="Default Modal"
-        subtitle="Balanced width for common tasks."
+        header={<Text as="h3" variant="heading-24">Default Modal</Text>}
         size="default"
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
@@ -246,8 +231,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "large"}
         onClose={closeModal}
-        title="Large Modal"
-        subtitle="Extra width for denser content."
+        header={<Text as="h3" variant="heading-24">Large Modal</Text>}
         size="large"
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
@@ -264,8 +248,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "fullscreen"}
         onClose={closeModal}
-        title="Fullscreen Modal"
-        subtitle="Uses the full viewport for immersive tasks."
+        header={<Text as="h3" variant="heading-24">Fullscreen Modal</Text>}
         size="fullscreen"
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
@@ -283,9 +266,6 @@ export function ModalDemoPage() {
         open={activeModal === "layout-presets"}
         onClose={closeModal}
         dismissible
-        headerAlign="space-between"
-        footerAlign="end"
-        bodyPadding="compact"
         header={<Text as="h3" variant="heading-24">Request an Edit</Text>}
         headerActions={<Button size="xsmall" appearance="text" label="Help" />}
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
@@ -298,8 +278,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "no-backdrop-close"}
         onClose={closeModal}
-        title="Backdrop Close Disabled"
-        subtitle="Clicking outside this modal will not close it."
+        header={<Text as="h3" variant="heading-24">Backdrop Close Disabled</Text>}
         closeOnBackdrop={false}
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
@@ -316,8 +295,7 @@ export function ModalDemoPage() {
       <Modal
         open={activeModal === "no-escape-close"}
         onClose={closeModal}
-        title="Escape Close Disabled"
-        subtitle="Pressing Escape will not close this modal."
+        header={<Text as="h3" variant="heading-24">Escape Close Disabled</Text>}
         closeOnEscape={false}
         footer={<ModalFooter onCancel={closeModal} onConfirm={closeModal} />}
       >
